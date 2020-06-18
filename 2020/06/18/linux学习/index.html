@@ -645,21 +645,27 @@
 <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/40.png" style="zoom:67%;">
 
 <p>2.2光标放在想删除的行，按dd即可，比如删除第五行；假如想要删除多行，光标放在想要删除的第一行，按<strong><em>nyy</em></strong>即可，比如删除第二行和第三行</p>
-<center> <figure> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\41.png" alt="1555576170074" style="zoom:60%;"> --->>> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\42.png" alt="1555576170074" style="zoom:60%;"> </figure> </center>
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/41.png" style="zoom:60%;">
+
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/42.png" style="zoom:60%;">
 
 
 
 <p>*<em>3) 在文件中查找某个单词 [命令行下 /关键字 ， 回车 查找 , 输入 n 就是查找下一个 ] *</em></p>
 <p>3.1首先，输入一些内容，按Esc进入正常模式，再按/进入命令行模式后边输入想要查的内容：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\43.png" alt="image-20200527135314839" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/43.png" style="zoom:67%;">
 
 <p>3.2回车之后找到第一个符合条件的内容，光标在第一个符合条件的内容开头；假如想找下一个符合该条件的内容，输入<strong><em>n</em></strong>，如右图，光标在下一个符合条件的地方：</p>
-<center> <figure> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\43.5.png" alt="1555576170074" style="zoom:60%;"> --->>> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\44.png" alt="1555576170074" style="zoom:60%;"> </figure> </center>
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/43.5.png" style="zoom:60%;">
+
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/44.png" style="zoom:60%;">
 
 
 
 <p>*<em>4) 设置文件的行号，取消文件的行号.[命令行下 : set nu 和 :set nonu] *</em></p>
-<center> <figure> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\45.png" alt="1555576170074" style="zoom:60%;"> --->>> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\46.png" alt="1555576170074" style="zoom:60%;"> </figure> </center>
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/45.png" style="zoom:60%;">
+
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/46.png" style="zoom:60%;">
 
 
 
@@ -671,7 +677,7 @@
 <p>7.1先显示行号；</p>
 <p>7.2在正常模式下，输入10（注意小键盘不好使），然后按shift+g</p>
 <p><strong>8) 更多的看整理的文档</strong></p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C47.png" alt="image-20200527141708643"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C47.png" alt></p>
 <h2 id="开机、重启和用户登录注销"><a href="#开机、重启和用户登录注销" class="headerlink" title="开机、重启和用户登录注销"></a>开机、重启和用户登录注销</h2><h3 id="关机-amp-重启命令"><a href="#关机-amp-重启命令" class="headerlink" title="关机&amp;重启命令"></a>关机&amp;重启命令</h3><p><strong>基本介绍</strong></p>
 <p>​    shutdown –h now 立该进行关机 </p>
 <p>​    shudown -h 1 “hello, 1 分钟后会关机了” </p>
@@ -684,70 +690,77 @@
 <h3 id="用户登录和注销"><a href="#用户登录和注销" class="headerlink" title="用户登录和注销"></a>用户登录和注销</h3><p><strong>基本介绍</strong></p>
 <p>1) 登录时尽量少用root帐号登录，因为它是系统管理员，最大的权限，避免操作失误。可以利用普通用户登录，登录后再用”su - 用户名’命令来切换成系统管理员身份. <strong><em>（这个之后再介绍）</em></strong></p>
 <p>2) 在提示符下输入 logout 即可注销用户。</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\48.png" alt="image-20200527144959538" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/48.png" style="zoom:67%;">
 
 <p><strong>使用细节</strong></p>
 <p>1) logout 注销指令在图形运行级别无效，在 运行级别 3下有效. </p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\49.png" alt="image-20200527145209487" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/49.png" style="zoom:67%;">
 
 
 
 <p>2) 运行级别这个概念，后面给大家介绍</p>
 <h2 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h2><h3 id="基本介绍-1"><a href="#基本介绍-1" class="headerlink" title="基本介绍"></a>基本介绍</h3><p>1.Linux系统是一个多用户多任务的操作系统，任何一个要使用系统资源的用户，都必须首先向系统管理员申请一个账号，然后以这个账号的身份进入系统；</p>
 <p>2.Linux的用户需要至少属于一个组；</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\50.png" alt="image-20200527145812111" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/50.png" style="zoom:67%;">
 
-<p>2.Linux的用户需要至少</p>
+
+
 <h3 id="添加用户（root下操作）"><a href="#添加用户（root下操作）" class="headerlink" title="添加用户（root下操作）"></a>添加用户（root下操作）</h3><p><strong>基本语法</strong></p>
 <p>​    useradd [选项]用户名                （选项可以不填）</p>
 <p><strong>应用案例</strong></p>
 <p>​    添加一个用户 xiaoming</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C51.png" alt="image-20200527150458361"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C51.png" alt></p>
 <p><strong>细节说明</strong> </p>
 <p>1) 当创建用户成功后，会自动创建和用户同名的*<em>家目录和组 *</em></p>
-<center> <figure> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\52.png" alt="1555576170074" style="zoom:80%;"> -&-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\53.png" alt="1555576170074" style="zoom:60%;"> </figure> </center>
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/52.png" style="zoom:80%;">
+
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/53.png" style="zoom:60%;">
 
 <p>​    <strong><em>cd：表示change directory切换目录</em></strong></p>
 <p>2) 也可以通过 useradd -d  指定目录  新的用户名，给新创建的用户<strong>指定家目录</strong>（但是组和用户名还是一样）</p>
 <p>2.1<strong>错误演示</strong>：先通过指令(在home目录下)mkdir建一个目录，命名为tiger</p>
-<center> <figure> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\54.png" alt="1555576170074" style="zoom:70%;"> -&-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\55.png" alt="1555576170074" style="zoom:50%;"> </figure> </center>
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/54.png" style="zoom:70%;">
+
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/55.png" style="zoom:50%;">
 
 <p>​                        然后创建一个用户dog放到tiger目录中</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C56.png" alt="image-20200527152623758"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C56.png" alt></p>
 <p>​                    按这样方式创建的用户dog在登录的时候会出现这样的问题：</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C56.5.png" alt="image-20200527164329796"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C56.5.png" alt></p>
 <p>2.2<strong>正确操作</strong>：在将用户放到指定目录的时候，这个指定目录不能提前创建，应该直接这样操作：</p>
 <p>​        useradd   -d   /home/tiger/   dog</p>
 <p>​                        按这种方式创建的账户登录正常：</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C56.5.1.png" alt="image-20200527164645126"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C56.5.1.png" alt></p>
 <h3 id="指定-修改密码（root下操作，指定密码时，界面是看不到的）"><a href="#指定-修改密码（root下操作，指定密码时，界面是看不到的）" class="headerlink" title="指定/修改密码（root下操作，指定密码时，界面是看不到的）"></a>指定/修改密码（root下操作，指定密码时，界面是看不到的）</h3><p>*<em>基本语法 *</em></p>
 <p>passwd 用户名 </p>
 <p>*<em>应用案例 *</em></p>
 <p> 给xiaoming 指定密码（设置为123456）</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C57.png" alt="image-20200527153956102"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C57.png" alt></p>
 <p>给dog指定密码（设置为123456）</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C58.png" alt="image-20200527154142905"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C58.png" alt></p>
 <p><strong>然后就可以用这两个设置好的用户进行登录</strong>（远程主机的地址不变），通过pwd指令查看当前用户所在位置：</p>
 <p>case1：xiaoming进行登录</p>
-<center> <figure> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\59.png" alt="1555576170074" style="zoom:70%;"> -&-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\60.png" alt="1555576170074" style="zoom:80%;"> </figure> </center>
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/59.png" style="zoom:70%;">
+
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/60.png" style="zoom:80%;">
 
 <p>case2：dog进行登录</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C61.png" alt="image-20200527162514227"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C61.png" alt></p>
 <h3 id="删除用户（root下）"><a href="#删除用户（root下）" class="headerlink" title="删除用户（root下）"></a>删除用户（root下）</h3><p><strong>基本语法</strong> </p>
 <p>userdel   用户名 </p>
 <p><strong>应用案例</strong></p>
 <p>*<em>1) 删除用户pig，但是要保留家目录 *</em>（注意后边用户组提到的删除用户问题）</p>
 <p>先创建用户以及新的家目录，然后删除这个用户，发现家目录依然存在：</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C62.png" alt="image-20200527162514227"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C62.png" alt></p>
 <p><strong>2) 删除cup以及用户主目录</strong></p>
 <p>添加cup之前，animals目录中没有用户。新添加在goods下的用户同时添加到animals目录中了，删除goods的用户和目录之后，animals中的cup用户也自动删除了：（假如animals目录不想要了，删除就行，具体删除目录的方式看<strong><em>用户组</em></strong>部分）</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C63.png" alt="image-20200527171859735"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C63.png" alt></p>
 <p><strong><em>在删除用户时，一般不会将目录删除。</em></strong></p>
 <h3 id="查询用户信息指令"><a href="#查询用户信息指令" class="headerlink" title="查询用户信息指令"></a>查询用户信息指令</h3><p>*<em>基本语法 *</em></p>
 <p>id 用户名 </p>
 <p>*<em>应用实例 *</em></p>
 <p>查询root 信息 ：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\64.png" alt="image-20200528151909456" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/64.png" style="zoom:67%;">
 
 <p>其中，uid是用户id号、gid是所在组的id号、组是组名</p>
 <p>*<em>细节说明 *</em></p>
@@ -757,7 +770,7 @@
 <p>su – 切换用户名</p>
 <p>*<em>应用实例 *</em></p>
 <p>创建一个用户zf, 指定密码，然后切换到 zf</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\65.png" alt="image-20200528152906332" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/65.png" style="zoom:67%;">
 
 <p>对上图进行说明：创建一个新用户zf，设置密码，然后从root用户通过指令su - zf切换到zf用户，zf用户有时候权限不够，就要切换到更高级的用户。通过exit能返回之前的用户，通过su - root，并输入密码也能进入root用户。</p>
 <p><strong>细节说明</strong> </p>
@@ -765,7 +778,7 @@
 <p>2) 当需要返回到原来用户时，使用exit指令</p>
 <h3 id="查看当前用户-登录用户"><a href="#查看当前用户-登录用户" class="headerlink" title="查看当前用户/登录用户"></a>查看当前用户/登录用户</h3><p>*<em>基本语法 *</em></p>
 <p>whoami/ who am I</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C66.png" alt="image-20200528153632188"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C66.png" alt></p>
 <h3 id="用户组"><a href="#用户组" class="headerlink" title="用户组"></a>用户组</h3><p>类似于角色，系统可以对有共性的多个用户进行统一的管理</p>
 <p><strong>新增组</strong></p>
 <p>指令 </p>
@@ -773,14 +786,14 @@
 <p><strong>删除组</strong></p>
 <p>指令(基本语法) </p>
 <p>groupdel 组名</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C67.png" alt="image-20200528154329572"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C67.png" alt></p>
 <p>注意：用户组里面如果有用户,必须先把用户删除了,才能删除组。</p>
 <p><strong>增加用户时直接加上组</strong></p>
 <p>指令(基本语法)</p>
 <p> useradd –g 用户组 用户名</p>
 <p>案例演示</p>
 <p>增加一个用户 zwj, 直接将他指定到 wudang（要先建组，再添加用户）</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\68.png" alt="image-20200528162646156" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/68.png" style="zoom:67%;">
 
 <p>可以发现：创建一个组，然后新建一个用户放到这个组中。同时自动创建了一个与用户名同名的家目录。</p>
 <p><strong>修改用户的组</strong></p>
@@ -788,7 +801,7 @@
 <p>usermod –g 用户组 用户名</p>
 <p>案例演示</p>
 <p>创建shaolin组，将zwj修改到shaolin组</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\69.png" alt="image-20200528164928791" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/69.png" style="zoom:67%;">
 
 <p>通过上图可以发现：zwj原本在武当组，然后将其修改所在组之后，通过id查询发现已经进入shaolin组，但是home下ll指令仍然显示在武当，通过下边的问题解答。</p>
 <p><strong>为什么用usermod改变用户组的之后，用ll指令查看文件的时候，还是显示原来的组而用id查看显示已经改好了？</strong></p>
@@ -802,7 +815,7 @@
 <p>*<em>/etc/passwd 文件 *</em></p>
 <p>​    用户（user）的配置文件，记录用户的各种信息 </p>
 <p>​    每行的含义：用户名:口令:用户标识号:组标识号:注释性描述:主目录:登录Shell</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C70.png" alt="image-20200528171527033"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C70.png" alt></p>
 <p>针对zwj进行解释：</p>
 <p>​    x：密码，加密的看不到；</p>
 <p>​    504：用户id（用户标识符）；</p>
@@ -812,11 +825,11 @@
 <p><strong>/etc/shadow 文件（不重要）</strong> </p>
 <p>​    口令的配置文件 </p>
 <p>​    每行的含义：登录名:加密口令:最后一次修改时间:最小时间间隔:最大时间间隔:警 告时间:不活动时    间:失效时间:标志</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C71.png" alt="image-20200528172411221"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C71.png" alt></p>
 <p><strong>/etc/group 文件（假如显示不全，就按<img src="file:///C:%5CUsers%5Cjohn%5CAppData%5CLocal%5CTemp%5CSGPicFaceTpBq%5C20852%5C103ED6B8.png" alt="img">箭头一直到底端即可）</strong> </p>
 <p>​    组(group)的配置文件，记录Linux包含的组的信息 </p>
 <p>​    每行含义：组名:口令:组标识号:组内用户列表</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C72.png" alt="image-20200528173000875"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C72.png" alt></p>
 <p>​    wudang：组名；</p>
 <p>​    x：口令；</p>
 <p>​    504：组标识符；</p>
@@ -828,12 +841,12 @@
 <p>4：系统未使用保留给用户 </p>
 <p>5：图形界面 </p>
 <p>6：系统重启</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\73.png" alt="image-20200529144527049" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/73.png" style="zoom:80%;">
 
 
 
 <p><strong>查看初始的运行级别：通过vim  /etc/inittab</strong></p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\74.png" alt="image-20200529145154570" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/74.png" style="zoom:67%;">
 
 <p>常用运行级别是3和5 ，要修改默认的运行级别可改文件/etc/inittab的id:5:initdefault:这一行中的数字（在XShell5中进入编辑模式修改，wq保存之后，reboot即可）。</p>
 <h3 id="切换到指定运行级别的指令"><a href="#切换到指定运行级别的指令" class="headerlink" title="切换到指定运行级别的指令"></a>切换到指定运行级别的指令</h3><p><strong>基本语法</strong></p>
@@ -841,9 +854,9 @@
 <p><strong>应用实例1</strong></p>
 <p>通过init 来切换不同的运行级别，比如 5-&gt;3 ， 然后关机</p>
 <p>1.在CentOs终端输入init 3，进入到这个界面之后，输入用户名和密码之后，如下图，保持在运行级别3。</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C75.png" alt="image-20200529145519672"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C75.png" alt></p>
 <p>2.再次输入init 5，就会返回图形界面：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\76.png" alt="image-20200529150117516" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/76.png" style="zoom:80%;">
 
 <p>3.然后输入init 0关机。</p>
 <p><strong>应用实例2</strong></p>
@@ -856,43 +869,43 @@
 <p>​        man [命令或配置文件]（功能描述：获得帮助信息） </p>
 <p>*<em>应用实例 *</em></p>
 <p>​        查看ls命令的帮助信息，按q退出</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\77.png" alt="image-20200529152324288" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/77.png" style="zoom:67%;">
 
 <h4 id="help指令"><a href="#help指令" class="headerlink" title="help指令"></a>help指令</h4><p>*<em>基本语法 *</em></p>
 <p>help 命令 （功能描述：获得shell内置命令的帮助信息） </p>
 <p>*<em>应用实例 *</em></p>
 <p>查看cd命令的帮助信息</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\78.png" alt="image-20200529152558660" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/78.png" style="zoom:67%;">
 
 <p>虽然上面两个都可以来获取指令帮助，但是需要英语功底，如果英语不太好的，推荐直接百度靠谱。</p>
 <h3 id="文件目录类"><a href="#文件目录类" class="headerlink" title="文件目录类"></a>文件目录类</h3><h4 id="pwd-指令"><a href="#pwd-指令" class="headerlink" title="pwd 指令"></a>pwd 指令</h4><p>*<em>基本语法 *</em></p>
 <p>pwd (功能描述：显示当前工作目录的绝对路径) </p>
 <p>*<em>应用实例 *</em></p>
 <p>显示当前工作目录的绝对路径</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C79.png" alt="image-20200529153817815"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C79.png" alt></p>
 <h4 id="ls指令"><a href="#ls指令" class="headerlink" title="ls指令"></a>ls指令</h4><p>*<em>基本语法 *</em></p>
 <p>ls [选项] [目录或是文件] </p>
 <p><strong>常用选项</strong></p>
 <pre><code>-a ：显示当前目录所有的文件和目录，包括隐藏的。 </code></pre><p>​        -l ：以列表的方式显示信息 </p>
 <p>*<em>应用实例 *</em></p>
 <p>查看当前目录的所有内容信息</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C80.png" alt="image-20200529154221225"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C80.png" alt></p>
 <h4 id="cd-指令"><a href="#cd-指令" class="headerlink" title="cd 指令"></a>cd 指令</h4><p>*<em>基本语法 *</em></p>
 <p>cd [参数] (功能描述：切换到指定目录) </p>
 <p>*<em>常用参数 *</em></p>
 <p>​        绝对路径和相对路径 </p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C81.png" alt="image-20200529154948657"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C81.png" alt></p>
 <p>​        cd ~ 或者cd ：回到自己的家目录</p>
 <p>​        cd .. 回到当前目录的上一级目录</p>
 <p>*<em>应用实例 *</em></p>
 <p>1.使用绝对路径切换到root目录 </p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C82.png" alt="image-20200529155323136"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C82.png" alt></p>
 <p>2.使用相对路径到/root 目录 </p>
 <p>​        这种方法需要知道该用户目录在那个目录下，才能写出这个指令，假设当前在usr/lib下，需要输入<strong><em>cd  ../../root</em></strong></p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C83.png" alt="image-20200529155925529"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C83.png" alt></p>
 <p>3.表示回到当前目录的上一级目录 </p>
 <p>4.回到家目录</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C84.png" alt="image-20200529160125842"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C84.png" alt></p>
 <h4 id="mkdir指令"><a href="#mkdir指令" class="headerlink" title="mkdir指令"></a>mkdir指令</h4><p>mkdir指令用于创建目录</p>
 <p><strong>基本语法</strong></p>
 <p> mkdir [选项] 要创建的目录 </p>
@@ -900,30 +913,30 @@
 <p> -p ：创建多级目录 </p>
 <p>*<em>应用实例 *</em></p>
 <p>案例1:创建一个目录 /home/dog </p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\85.png" alt="image-20200529160518393" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/85.png" style="zoom:80%;">
 
 <p>案例2:创建多级目录 /home/animal/tiger </p>
 <p>2.1单独使用mkdir无法创建多级目录</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C86.png" alt="image-20200529160653104"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C86.png" alt></p>
 <p>2.2需要配合  -p  使用</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C87.png" alt="image-20200529160819464"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C87.png" alt></p>
 <h4 id="rmdir指令删除空目录"><a href="#rmdir指令删除空目录" class="headerlink" title="rmdir指令删除空目录"></a>rmdir指令删除空目录</h4><p>*<em>基本语法 *</em></p>
 <p>rmdir [选项] 要删除的空目录 </p>
 <p>*<em>应用实例 *</em></p>
 <p>案例:删除一个目录 /home/dog </p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C88.png" alt="image-20200529161300678"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C88.png" alt></p>
 <p><strong>使用细节</strong></p>
 <p>rmdir 删除的是空目录，如果目录下有内容时无法删除的。 </p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C89.png" alt="image-20200529161434582"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C89.png" alt></p>
 <p>提示：如果需要删除非空目录，需要使用 rm -rf 要删除的目录</p>
 <h4 id="touch指令创建空文件"><a href="#touch指令创建空文件" class="headerlink" title="touch指令创建空文件"></a>touch指令创建空文件</h4><p>*<em>基本语法 *</em></p>
 <p>touch 文件名称 </p>
 <p><strong>应用实例</strong> </p>
 <p>案例: 创建一个空文件 helloworld.txt（注意要先确定创建文件的目录）</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\90.png" alt="image-20200529161747611" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/90.png" style="zoom:80%;">
 
 <p>也可以一次性创建多个文件：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\91.png" alt="image-20200529162041627" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/91.png" style="zoom:80%;">
 
 
 
@@ -935,7 +948,9 @@
 <p><strong>应用实例</strong> </p>
 <p>案例1: 将 /home/aaa.txt 拷贝到 /home/bbb 目录下 （拷贝单个文件）(习惯用相对路径)</p>
 <p>​            也就是：将当前目录的aaa文件拷贝到当前目录的bbb目录下。</p>
-<center> <figure> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\92.png" alt="1555576170074" style="zoom:52%;"> -->><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\93.png" alt="1555576170074" style="zoom:70%;"> </figure> </center>
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/92.png" style="zoom:52%;">
+
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/93.png" style="zoom:70%;">
 
 
 
@@ -943,12 +958,12 @@
 
 <p>案例2: 递归复制整个文件夹，举例 ：将/home/test 的整个目录拷贝到 /hone/bbb目录下（<strong><em>注意目录的随时切换</em></strong>）</p>
 <p>指令解释：首先看到test目录下有三个txt文件，bbb目录下只有一个txt文件。然后回到home目录下将test目录下的所有文件拷贝到bbb目录下。此时看到bbb目录下多出来了test目录，打开这个目录发现有三个txt文件。说明拷贝成功。</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\94.png" alt="image-20200529171846725" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/94.png" style="zoom:80%;">
 
 <p>*<em>使用细节 *</em></p>
 <p><strong><em>强制覆盖不提示的方法：\cp</em></strong></p>
 <p>上面的图片显示已经把test目录拷贝到了bbb目录中，假如想再执行一次这个操作覆盖bbb中的test目录，会提示是否覆盖每个txt文件。当使用\cp，则直接进行文件覆盖。</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C95.png" alt="image-20200529172632249"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C95.png" alt></p>
 <h4 id="rm-指令移除文件或目录"><a href="#rm-指令移除文件或目录" class="headerlink" title="rm 指令移除文件或目录"></a>rm 指令移除文件或目录</h4><p>*<em>基本语法 *</em></p>
 <p>rm [选项] 要删除的文件或目录 </p>
 <p>*<em>常用选项 *</em></p>
@@ -956,15 +971,15 @@
 <p>-f ： 强制删除不提示</p>
 <p>*<em>应用实例 *</em></p>
 <p>案例1: 将 /home/aaa.txt 删除 </p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\96.png" alt="image-20200530140101676" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/96.png" style="zoom:80%;">
 
 <p>案例2: 递归删除整个文件夹 /home/bbb /test</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\97.png" alt="image-20200530140427602" style="zoom: 80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/97.png" style="zoom: 80%;">
 
 <p><strong>使用细节</strong> </p>
 <p>强制删除不提示的方法：带上 -f 参数即可</p>
 <p>案例3：删除/home/test</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\98.png" alt="image-20200530140657721" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/98.png" style="zoom:80%;">
 
 
 
@@ -973,10 +988,10 @@
 <p>mv /temp/movefile /targetFolder (功能描述：移动文件)</p>
 <p>*<em>应用实例 *</em></p>
 <p>案例1: 通过绝对路径方式将 /home/bbb/ aaa.txt文件重新命名为  pig.txt ；再通过相对路径的方式将pig.txt改名为dog.txt（注意：使用相对路径执行指令的时候，要先cd到相应的目录下）</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\99.png" alt="image-20200530142011596" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/99.png" style="zoom:80%;">
 
 <p>案例2:将 /home/bbb/dog.txt 文件 移动到 /home/aaa 目录下</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\100.png" alt="image-20200530143006827" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/100.png" style="zoom:80%;">
 
 
 
@@ -986,31 +1001,31 @@
 <p>-n ：显示行号</p>
 <p>*<em>应用实例 *</em></p>
 <p>案例: /ect/profile 文件内容，并显示行号 </p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\101.png" alt="image-20200530143609091" style="zoom: 50%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/101.png" style="zoom: 50%;">
 
 <p><strong>使用细节</strong> </p>
 <p>cat 只能浏览文件，而不能修改文件，为了浏览方便，一般会带上管道命令 | more</p>
 <p>如上图所示：输入cat  -n   /etc/profile之后直接将所有内容一次全部显示出来，不方便浏览。所以指令如下图，其中more代表分页显示（按空格进入下一页）</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\102.png" alt="image-20200530143851111" style="zoom: 50%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/102.png" style="zoom: 50%;">
 
 
 
 <h4 id="more指令"><a href="#more指令" class="headerlink" title="more指令"></a>more指令</h4><p>more指令是一个基于VI编辑器的文本过滤器，它以全屏幕的方式按页显示文本文件的内容。 more指令中内置了若干快捷键，详见操作说明：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\103.png" alt="image-20200530144042852" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/103.png" style="zoom:67%;">
 
 <p><strong>基本语法</strong> </p>
 <p>more 要查看的文件</p>
 <p>*<em>应用实例 *</em></p>
 <p>案例: 采用more查看文件 /etc/profile（看上上图即可）</p>
 <h4 id="less指令"><a href="#less指令" class="headerlink" title="less指令"></a>less指令</h4><p>less指令用来分屏查看文件内容，它的功能与more指令类似，但是比more指令更加强大，支 持各种显示终端。less指令在显示文件内容时，并不是一次将整个文件加载之后才显示，而是 根据显示需要加载内容，对于<strong><em>显示大型文件具有较高的效率</em></strong></p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\104.png" alt="image-20200530144914253" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/104.png" style="zoom:67%;">
 
 <p><strong>基本语法</strong> </p>
 <p>less 要查看的文件</p>
 <p>应用实例 </p>
 <p>案例: 采用less查看一个 大文件文件 /opt/金庸-射雕英雄传txt精校版.txt（先使用Xftp5传输即可）</p>
 <p><strong><span style="color:red;">补充一个技能：</span></strong><span style="color:red;font-family:微软雅黑">可以使用tab键补充想要输入的文件的全称</span></p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\105.png" alt="image-20200530145349627" style="zoom: 67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/105.png" style="zoom: 67%;">
 
 
 
@@ -1021,10 +1036,10 @@
 <p><strong>应用实例</strong> </p>
 <p>案例1: 将 /home 目录下的文件列表 a.txt 中 </p>
 <p>解释：ll指令是看当前目录中都有什么，ll   &gt;   a.txt表示将目录的内容写到a.txt中。当a.txt文件不存在，就自动创建这个文件；假如这个文件之前已经存在，就覆盖掉之前的内容。（通过more指令看a.txt文件的内容，发现写入成功）</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\106.png" alt="image-20200530152515865" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/106.png" style="zoom:80%;">
 
 <p>案例2: 将当前日历信息 追加到 /home/mycal 文件中(没有这个文件就创建这个文件)，追加了两次。</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\107.png" alt="image-20200530153722981" style="zoom: 67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/107.png" style="zoom: 67%;">
 
 
 
@@ -1032,17 +1047,17 @@
 <p>echo [选项] [输出内容] </p>
 <p>*<em>应用实例 *</em></p>
 <p>案例: 使用echo 指令输出环境变量 （注意大小写）</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\108.png" alt="image-20200530154251638" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/108.png" style="zoom:80%;">
 
 <p>案例: 使用echo 指令输出 hello,world!（注意要使用转义字符）</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C109.png" alt="image-20200530154620706"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C109.png" alt></p>
 <h4 id="head指令d用于显示文件的开头部分内容"><a href="#head指令d用于显示文件的开头部分内容" class="headerlink" title="head指令d用于显示文件的开头部分内容"></a>head指令d用于显示文件的开头部分内容</h4><p>默认情况下head指令显示文件的前10行内容</p>
 <p>*<em>基本语法 *</em></p>
 <p>head 文件 (功能描述：查看文件头10行内容) </p>
 <p>head -n 5 文件 (功能描述：查看文件头5行内容，5可以是任意行数) </p>
 <p>*<em>应用实例 *</em></p>
 <p>案例: 查看/etc/profile 的前面5行代码</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\110.png" alt="image-20200530155137736" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/110.png" style="zoom:80%;">
 
 
 
@@ -1053,16 +1068,16 @@
 <p>3) tail -f 文件 （功能描述：实时追踪该文档的所有更新）</p>
 <p>*<em>应用实例 *</em></p>
 <p>案例1: 查看/etc/profile 最后5行的代码 </p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C111.png" alt="image-20200530155424213"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C111.png" alt></p>
 <p>案例2: 实时监控 myFile.txt , 看看当文件有变化时，是否看到？</p>
 <p>2.1在centos终端新建一个文件/home/myFile.txt，并往里边写点东西：</p>
 <p>（下图展示了向txt文件中写入内容的两种方法）</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C112.png" alt="image-20200530162704752"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C112.png" alt></p>
 <p>2.2通过  tail   -f   myFile.txt指令监控文件的内容变化</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\113.png" alt="image-20200530162903637" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/113.png" style="zoom:80%;">
 
 <p>2.3通过centos向myFile.txt中再写一些内容，就会在XShell5中自动显示更新的内容，是实时的：（ctrl+z退出）</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\114.png" alt="image-20200530163054582" style="zoom: 80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/114.png" style="zoom: 80%;">
 
 
 
@@ -1071,11 +1086,11 @@
 <p>history</p>
 <p>*<em>应用实例 *</em></p>
 <p>案例1: 显示所有的历史命令 </p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C115.png" alt="image-20200601192442744"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C115.png" alt></p>
 <p>案例2: 显示最近使用过的10个指令。 </p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C116.png" alt="image-20200601192523149"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C116.png" alt></p>
 <p>案例3：执行历史编号为5的指令</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\117.png" alt="image-20200601192631027" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/117.png" style="zoom:80%;">
 
 
 
@@ -1095,7 +1110,7 @@
 <p>案例1: 显示当前时间信息 </p>
 <p>案例2: 显示当前时间年月日 </p>
 <p>案例3: 显示当前时间年月日时分秒</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\118.png" alt="image-20200601193339279" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/118.png" style="zoom:80%;">
 
 
 
@@ -1105,10 +1120,10 @@
 <p>cal [选项] （功能描述：不加选项，显示本月日历）</p>
 <p><strong>应用实例</strong></p>
 <p>案例1: 显示当前日历 </p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\119.png" alt="image-20200601193940871" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/119.png" style="zoom:80%;">
 
 <p>案例2: 显示2020年日历</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\120.png" alt="image-20200601194028705" style="zoom: 67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/120.png" style="zoom: 67%;">
 
 
 
@@ -1118,18 +1133,18 @@
 <p><strong>基本语法</strong></p>
 <p>find [搜索范围] [选项]</p>
 <p><strong>选项说明</strong></p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\121.png" alt="image-20200601194210754" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/121.png" style="zoom:80%;">
 
 <p><strong>应用实例</strong></p>
 <p>案例1: 按文件名：根据名称查找/home 目录下的a.txt文件 </p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\122.png" alt="image-20200601194624094" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/122.png" style="zoom:80%;">
 
 <p>案例2：按拥有者：查找/home目录下，用户名称为 nobody的文件 </p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\123.png" alt="image-20200601195020331" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/123.png" style="zoom:80%;">
 
 <p>案例3：查找整个linux系统下大于20m的文件（+n 大于 -n小于 n等于）</p>
 <p>(注意字母要大写，ctrl + c终止搜索)</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\124.png" alt="image-20200601195506314" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/124.png" style="zoom:80%;">
 
 
 
@@ -1140,7 +1155,7 @@
 <p>由于locate指令基于数据库进行查询，所以<span style="color:red">第一次运行前，必须使用updatedb指令创建locate 数据库</span></p>
 <p>*<em>应用实例 *</em></p>
 <p>案例1: 请使用locate 指令快速定位tiger文件所在目录</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\125.png" alt="image-20200601200316659" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/125.png" style="zoom:80%;">
 
 
 
@@ -1150,13 +1165,13 @@
 <p>*<em>基本语法 *</em></p>
 <p>grep [选项] 查找内容 源文件</p>
 <p><strong>常用选项</strong></p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\126.png" alt="image-20200601200620378" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/126.png" style="zoom:80%;">
 
 
 
 <p>*<em>应用实例 *</em></p>
 <p>请在 myFile.txt 文件中，查找 “i am three” 所在行，并且显示行号</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\127.png" alt="image-20200601200933061" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/127.png" style="zoom:80%;">
 
 
 
@@ -1166,10 +1181,10 @@
 <p>gunzip 文件.gz （功能描述：解压缩文件命令）</p>
 <p>*<em>应用实例 *</em></p>
 <p>案例1: gzip压缩， 将 /home下的 helloworld.txt文件进行压缩 (原来的文件不保留)</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\128.png" alt="image-20200601201724697" style="zoom: 67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/128.png" style="zoom: 67%;">
 
 <p>案例2: gunzip压缩， 将 /home下的 hello.txt.gz 文件进行解压缩</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\129.png" alt="image-20200601201917631" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/129.png" style="zoom:67%;">
 
 
 
@@ -1185,7 +1200,7 @@
 <p><strong>基本语法</strong> </p>
 <p>tar [选项] XXX.tar.gz 打包的内容 (功能描述：打包目录，压缩后的文件格式.tar.gz) </p>
 <p><strong>选项说明</strong></p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\130.png" alt="image-20200601202211111" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/130.png" style="zoom:80%;">
 
 
 
@@ -1201,7 +1216,9 @@
 <p><strong>应用实例</strong></p>
 <p>在home目录下创建一个police组，再创建用户tom，将tom放在police组。然后使用tom创建一个文件ok.txt（注意要先创建组）</p>
 <p>代码解释如下：首先查看组的最后10条内容，然后添加police组，再次查看组信息，发现组创建成功。然后添加用户tom，指定组为police并设置密码123456。然后用tom用户登录，并创建文件ok.txt（右图最底下的tom表明ok.txt的所有者是tom，police表明ok.txt所在组为police，也就是文件所有者所在的组）。</p>
-<center> <figure> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\131.png" alt="1555576170074" style="zoom:70%;"> -->><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\132.png" alt="1555576170074" style="zoom:80%;"> </figure> </center>
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/131.png" style="zoom:70%;">
+
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/132.png" style="zoom:80%;">
 
 
 
@@ -1209,15 +1226,15 @@
 <p><strong>应用案例</strong> </p>
 <p>1.使用root 创建一个文件apple.txt ，然后将其所有者修改成tom</p>
 <p>没改变apple.txt之前，其所有者为root。</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\133.png" alt="image-20200602144419524" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/133.png" style="zoom:67%;">
 
 <p>改变了所有者之后如下图，apple.txt的所有者变为tom：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\134.png" alt="image-20200602144808723" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/134.png" style="zoom:80%;">
 
 
 
 <p>2.使用home 创建一个文件orange.txt ，然后将其所有者修改成tom</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\135.png" alt="image-20200602145203343" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/135.png" style="zoom:80%;">
 
 
 
@@ -1227,7 +1244,7 @@
 <p>groupadd 组名</p>
 <p>*<em>应用实例: *</em></p>
 <p>/home下创建一个用户 fox ，并放入到 monster组中</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\136.png" alt="image-20200602145710209" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/136.png" style="zoom:67%;">
 
 
 
@@ -1239,14 +1256,16 @@
 <p>chgrp 组名 文件名</p>
 <p>*<em>应用实例 *</em></p>
 <p>使用root用户在/home下创建文件 cake.txt ,看看当前这个文件属于哪个组，然后将这个文件所在组，修改到police组。（想改文件的所有者前边讲过，看一下就行）</p>
-<center> <figure> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\137.png" alt="1555576170074" style="zoom:60%;"> -->><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\138.png" alt="1555576170074" style="zoom:60%;"> </figure> </center>
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/137.png" style="zoom:60%;">
+
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/138.png" style="zoom:60%;">
 
 
 
 <h3 id="其它组"><a href="#其它组" class="headerlink" title="其它组"></a>其它组</h3><p>除文件的所有者和所在组的用户外，系统的其它用户都是文件的其它组</p>
 <h3 id="改变用户所在组（在用户管理讲的）"><a href="#改变用户所在组（在用户管理讲的）" class="headerlink" title="改变用户所在组（在用户管理讲的）"></a>改变用户所在组（在用户管理讲的）</h3><h3 id="权限的基本介绍"><a href="#权限的基本介绍" class="headerlink" title="权限的基本介绍"></a>权限的基本介绍</h3><p>以tom目录下的一条数据进行分析：</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C139.png" alt="image-20200602154610717"></p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C140.jpg" alt="140"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C139.png" alt></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C140.jpg" alt></p>
 <h3 id="rwx权限详解"><a href="#rwx权限详解" class="headerlink" title="rwx权限详解"></a>rwx权限详解</h3><p>*<em>rwx作用到文件： *</em></p>
 <p>1) [ r ]代表可读(read): 可以读取,查看 </p>
 <p>2) [ w ]代表可写(write): 可以修改,但是不代表可以删除该文件,删除一个文件的前提条件是对该文件所在的目录有写权限，才能删除该文件. </p>
@@ -1255,13 +1274,13 @@
 <p>1) [ r ]代表可读(read): 可以读取，ls查看目录内容 </p>
 <p>2) [ w ]代表可写(write): 可以修改,目录内创建+删除+重命名目录 </p>
 <p>3) [ x ]代表可执行(execute):可以进入该目录</p>
-<h3 id="文件及目录权限实际案例"><a href="#文件及目录权限实际案例" class="headerlink" title="文件及目录权限实际案例"></a>文件及目录权限实际案例</h3><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\141.png" alt="image-20200602161219092" style="zoom:67%;">
+<h3 id="文件及目录权限实际案例"><a href="#文件及目录权限实际案例" class="headerlink" title="文件及目录权限实际案例"></a>文件及目录权限实际案例</h3><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/141.png" style="zoom:67%;">
 
 
 
 <h3 id="修改权限-chmod"><a href="#修改权限-chmod" class="headerlink" title="修改权限-chmod"></a>修改权限-chmod</h3><p>*<em>基本说明： *</em></p>
 <p>通过chmod指令，可以修改文件或者目录的权限</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\142.png" alt="image-20200602161615958" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/142.png" style="zoom:67%;">
 
 
 
@@ -1271,13 +1290,13 @@
 <p>3) chmod a-x 文件目录名  【给所有人去掉执行的权限】</p>
 <p><strong>案例演示</strong></p>
 <p>1) 通过tom用户创建abc文件，给abc文件的所有者读写执行的权限，给所在组读执行权限，给其它组读执行权限</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\143.png" alt="image-20200602162307118" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/143.png" style="zoom:80%;">
 
 <p>2) 给abc文件的所有者除去执行的权限，增加组写的权限 </p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\144.png" alt="image-20200602162457677" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/144.png" style="zoom:80%;">
 
 <p>3) 给abc文件的所有用户添加读的权限</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\145.png" alt="image-20200602162614279" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/145.png" style="zoom:80%;">
 
 
 
@@ -1286,7 +1305,7 @@
 <p>相当于 chmod 751 文件目录名</p>
 <p><strong>案例演示</strong></p>
 <p>将 /home/a.txt 文件的权限修改成 rwxrw-rw-, 使用给数字的方式实现</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\146.png" alt="image-20200602163038410" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/146.png" style="zoom:80%;">
 
 
 
@@ -1298,7 +1317,7 @@
 <p>-R 如果是目录 则使其下所有子文件或目录递归生效</p>
 <p><strong>案例演示</strong></p>
 <p>1) 请将 /home/pig .txt 文件的所有者修改成 tom </p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\147.png" alt="image-20200602163605965" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/147.png" style="zoom:80%;">
 
 
 
