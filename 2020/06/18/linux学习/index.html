@@ -1721,80 +1721,83 @@
 
 
 <h2 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h2><h3 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><p>0) 先将软件通过xftp5 上传到 /opt 下（一般来说，软件的安装放到opt目录下）</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\javaee\2.png" alt="image-20200606133704255" style="zoom: 50%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/javaee\2.png" style="zoom: 50%;">
 
 <p>1) 解压缩到 /opt </p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\javaee\3.png" alt="image-20200606134258642" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/javaee\3.png" style="zoom:80%;">
 
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\javaee\4.png" alt="image-20200606134411022" style="zoom: 80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/javaee\4.png" style="zoom: 80%;">
 
 <p>2) 配置环境变量的配置文件vim /etc/profile，进入之后将下边三句话插入到文件的最后边(在正常模式下输入G可以定位到文件末尾)，然后:wq保存</p>
 <p>​        JAVA_HOME=/opt/jdk1.7.0_79 <span style="color:red">        表示JAVA_HOME</span></p>
 <p>​         PATH=/opt/jdk1.7.0_79/bin:$PATH  <span style="color:red">        表示路径</span></p>
 <p>​        export JAVA_HOME PATH <span style="color:red">        表示输出变量，环境变量生效</span></p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5Cjavaee%5C5.png" alt="image-20200606135128088"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5Cjavaee%5C5.png" alt></p>
 <p>3）需要注销用户，环境变量才能生效</p>
 <p>​            假如在运行级别3：logout即可</p>
 <p>​            假如在运行级别5：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\javaee\6.png" alt="image-20200606135739885" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/javaee\6.png" style="zoom:80%;">
 
 <h3 id="测试是否安装成功"><a href="#测试是否安装成功" class="headerlink" title="测试是否安装成功"></a>测试是否安装成功</h3><p>在任何目录下输入java或javac，只要下边显示内容就说明安装成功。</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\javaee\7.png" alt="image-20200606135909626" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/javaee\7.png" style="zoom:80%;">
 
 <p>编写一个简单的Hello.java 输出”hello!”（顺便说一下touch    hello.lava与vim    hello.java的区别）</p>
 <p>1.1首先使用touch    Hello.java，发现文件存在于/opt目录中：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\javaee\7.5.png" alt="image-20200606140801997" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/javaee\7.5.png" style="zoom:80%;">
 
 <p>1.2然后vim    hello.java编辑文件内容，并保存：（注意文件名和类名要一致，否则编译报错）</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\javaee\9.png" alt="image-20200606141159656" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/javaee\9.png" style="zoom:80%;">
 
 <p>1.3对Hello.java进行编译，发现生成Hello.class文件，然后运行Hello.class文件：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\javaee\10.png" alt="image-20200606143139977" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/javaee\10.png" style="zoom:67%;">
 
 
 
 <p>2.1直接使用vim    hello.java编辑文件（演示直接用vim的方法之前需要将上一步的Hello.java和Hello.class文件删除）</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\javaee\11.png" alt="image-20200606143515700" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/javaee\11.png" style="zoom:67%;">
 
 
 
 <p>2.2正常编译运行即可</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\javaee\12.png" alt="image-20200606143832808" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/javaee\12.png" style="zoom:80%;">
 
 
 
 <p>也就是说二者的共同点是都能生成文件；区别是touch方法先在目录中生成文件，然后可以使用vim进行编辑，而vim是先编辑文件内容之后在目录中生成文件。</p>
 <h2 id="tomcat的安装"><a href="#tomcat的安装" class="headerlink" title="tomcat的安装"></a>tomcat的安装</h2><h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><p>1) 解压缩到/opt </p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\javaee\13.png" alt="image-20200606144610491" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/javaee\13.png" style="zoom:80%;">
 
 <p>2)进入Tomcat的/bin下，启动tomcat ./startup.sh </p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\javaee\14.png" alt="image-20200606145208151" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/javaee\14.png" style="zoom:67%;">
 
 <p>此时，在linux本地浏览器可以访问tomcat（linux的localhost就是192.168.158.130）；但是在windows下访问不到linux的ip地址的Tomcat</p>
-<center> <figure> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\javaee\16.png" alt="1555576170074" style="zoom:60%;"> --&&&-- <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\javaee\17.png" alt="1555576170074" style="zoom:70%;"> </figure> </center>
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/javaee\16.png" style="zoom:60%;">
 
 
 
+<p>​                                                                    <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/javaee\17.png" style="zoom:70%;"> </p>
 <p>（注意：Windows下是可以访问本机ip地址的Tomcat的：）</p>
-<center> <figure> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\javaee\15.png" alt="1555576170074" style="zoom:60%;"> --&&&-- <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\javaee\18.png" alt="1555576170074" style="zoom:70%;"> </figure> </center>
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/javaee\15.png" style="zoom:60%;">
+
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/javaee\18.png" style="zoom:70%;">
 
 
 
 <p>3) 为了让Windows能访问192.168.158.130地址，需要开放端口 </p>
 <p>3.1查看防火墙状态，是否放行8080端口，发现没有放行：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\javaee\19.png" alt="image-20200606151510149" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/javaee\19.png" style="zoom:67%;">
 
 <p>3.2vim /etc/sysconfig/iptables回车，开放8080端口如下图(yy复制一行内容，p粘贴)，wq保存，并重启，发现端口已经打开</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\javaee\20.png" alt="image-20200606151856707" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/javaee\20.png" style="zoom:80%;">
 
 
 
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\javaee\21.png" alt="image-20200606152248882" style="zoom: 67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/javaee\21.png" style="zoom: 67%;">
 
 
 
 <p>3.3在Windows下也能访问linux的ip地址的tomcat</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\javaee\22.png" alt="image-20200606152429955" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/javaee\22.png" style="zoom:80%;">
 
 
 
@@ -1813,35 +1816,35 @@
 <p>2) 对于JavaEE和Python程序员来说，工作的需要，你的老大会要求你编写一些Shell脚本 进行程序或者是服务器的维护，比如编写一个定时备份数据库的脚本；</p>
 <p>3) 对于大数据程序员来说，需要编写Shell程序来管理集群。</p>
 <h2 id="Shell是什么"><a href="#Shell是什么" class="headerlink" title="Shell是什么"></a>Shell是什么</h2><p>Shell是一个命令行解释器，它为用户提供了一个向Linux内核发送请求以便运行程序的界面系统级程序，用户可以用Shell来启动、挂起、停止甚至是编写一些程序。</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\1.png" alt="image-20200607121955041" style="zoom: 50%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\1.png" style="zoom: 50%;">
 
 
 
 <h2 id="Shell脚本的执行方式"><a href="#Shell脚本的执行方式" class="headerlink" title="Shell脚本的执行方式"></a>Shell脚本的执行方式</h2><h3 id="脚本格式要求"><a href="#脚本格式要求" class="headerlink" title="脚本格式要求"></a>脚本格式要求</h3><p>1) 脚本以#!/bin/bash开头 </p>
 <p>2) 脚本需要有可执行权限</p>
 <h3 id="编写第一个Shell脚本"><a href="#编写第一个Shell脚本" class="headerlink" title="编写第一个Shell脚本"></a>编写第一个Shell脚本</h3><p>创建一个Shell脚本，输出hello world!</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\2.png" alt="image-20200607123835848" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\2.png" style="zoom:80%;">
 
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\3.png" alt="image-20200607123715351" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\3.png" style="zoom:80%;">
 
 
 
 <h3 id="脚本的常用执行方式"><a href="#脚本的常用执行方式" class="headerlink" title="脚本的常用执行方式"></a>脚本的常用执行方式</h3><p>方式1(输入脚本的绝对路径或相对路径) </p>
 <p>​            1)首先要赋予helloworld.sh 脚本的+x权限 </p>
 <p>​            2)执行脚本</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\4.png" alt="image-20200607124245723" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\4.png" style="zoom:80%;">
 
 <p>方式2(sh+脚本) 说明：</p>
 <p>​            不用赋予脚本+x权限，直接执行即可</p>
 <p>（测试之前先取消上一步的x权限）</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\5.png" alt="image-20200607124641581" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\5.png" style="zoom:80%;">
 
 
 
 <h2 id="Shell的变量"><a href="#Shell的变量" class="headerlink" title="Shell的变量"></a>Shell的变量</h2><h3 id="Shell的变量的介绍"><a href="#Shell的变量的介绍" class="headerlink" title="Shell的变量的介绍"></a>Shell的变量的介绍</h3><p>1）Linux Shell中的变量分为，系统变量和用户自定义变量。 </p>
 <p>2）系统变量：$HOME、$PWD、$SHELL、$USER等等 比如： echo $HOME 等等.. </p>
 <p>3）显示当前shell中所有变量：set</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\6.png" alt="image-20200607125200858" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\6.png" style="zoom:80%;">
 
 
 
@@ -1852,12 +1855,12 @@
 <p><strong>快速入门</strong></p>
 <p>案例1：定义变量A </p>
 <p>案例2：撤销变量A </p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5Cshell%5C7.png" alt="image-20200607125643397"></p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\8.png" alt="image-20200607125815494" style="zoom:80%;">
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5Cshell%5C7.png" alt></p>
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\8.png" style="zoom:80%;">
 
 <p>案例3：声明静态的变量B=2，不能unset </p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5Cshell%5C9.png" alt="image-20200607130046496"></p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\10.png" alt="image-20200607130117955" style="zoom:80%;">
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5Cshell%5C9.png" alt></p>
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\10.png" style="zoom:80%;">
 
 <p>案例4：可把变量提升为全局环境变量，可供其他shell程序使用</p>
 <p><strong>定义变量的规则</strong></p>
@@ -1867,9 +1870,9 @@
 <p><strong>将命令的返回值赋给变量</strong></p>
 <p>1）A=’……’反引号(ESC下边那个键)，运行里面的命令，并把结果返回给变量A </p>
 <p>2）A=$(……) 等价于反引号</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\11.png" alt="image-20200607131400306" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\11.png" style="zoom:80%;">
 
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\12.png" alt="image-20200607131427269" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\12.png" style="zoom:80%;">
 
 
 
@@ -1880,9 +1883,9 @@
 <p>$@（功能描述：这个变量也代表命令行中所有的参数，不过$@把每个参数区分对待） </p>
 <p>$#（功能描述：这个变量代表命令行中所有参数的个数）</p>
 <h3 id="应用实例-3"><a href="#应用实例-3" class="headerlink" title="应用实例"></a>应用实例</h3><p>编写一个shell脚本 positionPara.sh ， 在脚本中获取到命令行的各个参数信息</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\12.5.png" alt="image-20200607133422052" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\12.5.png" style="zoom:80%;">
 
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\13.png" alt="image-20200607133339479" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\13.png" style="zoom:80%;">
 
 
 
@@ -1895,14 +1898,16 @@
 <p>3) expr m - n </p>
 <p>4) expr \*, /, % 乘，除，取余</p>
 <h3 id="应用实例-4"><a href="#应用实例-4" class="headerlink" title="应用实例"></a>应用实例</h3><p>案例1：计算（2+3）x  4的值 </p>
-<center> <figure> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\14.png" alt="1555576170074" style="zoom:80%;"> --&&&-- <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\15.png" alt="1555576170074" style="zoom:80%;"> </figure> </center>
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\14.png" style="zoom:80%;">
+
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\15.png" style="zoom:80%;">
 
 
 
 <p>案例2：请求出命令行的前两个参数[整数]的和（下图输入的一共有三个参数，但是仅仅计算前两个参数）</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\16.png" alt="image-20200607141658767" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\16.png" style="zoom:80%;">
 
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5Cshell%5C17.png" alt="image-20200607141719598"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5Cshell%5C17.png" alt></p>
 <h2 id="条件判断（wait）"><a href="#条件判断（wait）" class="headerlink" title="条件判断（wait）"></a>条件判断（wait）</h2><h2 id="流程控制（wait）"><a href="#流程控制（wait）" class="headerlink" title="流程控制（wait）"></a>流程控制（wait）</h2><h2 id="read读取控制台输入"><a href="#read读取控制台输入" class="headerlink" title="read读取控制台输入"></a>read读取控制台输入</h2><p>也就是说程序的执行过程中，有时候需要读取用户的输入。</p>
 <h3 id="基本语法-5"><a href="#基本语法-5" class="headerlink" title="基本语法"></a>基本语法</h3><p>read(选项)(参数) </p>
 <p><strong>选项</strong>： </p>
@@ -1911,16 +1916,16 @@
 <p>*<em>参数 *</em></p>
 <p>​            变量：指定读取值的变量名</p>
 <h3 id="应用实例-5"><a href="#应用实例-5" class="headerlink" title="应用实例"></a>应用实例</h3><p>案例1：读取控制台输入一个num值 </p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\18.png" alt="image-20200607143132020" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\18.png" style="zoom:80%;">
 
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\19.png" alt="image-20200607143110811" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\19.png" style="zoom:80%;">
 
 <p>案例2：读取控制台输入一个num值，在10秒内输入。（如果超出时间，自动跳出，如下图）</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\20.png" alt="image-20200607143434588" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\20.png" style="zoom:80%;">
 
 
 
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\21.png" alt="image-20200607143526745" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\21.png" style="zoom:80%;">
 
 
 
@@ -1932,14 +1937,14 @@
 <p>选项： suffix为后缀，如果suffix被指定了，basename会将pathname或string中的suffix去掉</p>
 <p><strong>应用实例</strong></p>
 <p>请返回 /home/aaa/dog.txt 的 “dog.txt” 部分</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\22.png" alt="image-20200607144229069" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\22.png" style="zoom:80%;">
 
 <p><strong>dirname基本语法</strong></p>
 <p>功能：返回完整路径最后 / 的前面的部分，常用于返回路径部分 </p>
 <p>dirname 文件绝对路径 （功能描述：从给定的包含绝对路径的文件名中去除文件名（非目录的部分）， 然后返回剩下的路径（目录的部分））</p>
 <p><strong>应用实例</strong></p>
 <p>请返回 /home/aaa/test.txt 的 /home/aaa</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\23.png" alt="image-20200607144339385" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\23.png" style="zoom:80%;">
 
 
 
@@ -1952,9 +1957,9 @@
 <p>调用直接写函数名：funname [值]</p>
 <p>*<em>应用实例 *</em></p>
 <p>计算输入两个参数的和， getSum</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\24.png" alt="image-20200607145514202" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\24.png" style="zoom:80%;">
 
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\shell\25.png" alt="image-20200607145607846" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/shell\25.png" style="zoom:80%;">
             </div>
             <hr/>
 
