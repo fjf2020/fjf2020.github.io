@@ -487,30 +487,32 @@
 <li>全部使用默认设置即可 </li>
 <li>需要reboot重新启动即可生效</li>
 </ol>
-<center> <figure> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/6.png" alt="1555576170074" style="zoom:60%;"> ------>>>>>> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/7.png" alt="1555576170074" style="zoom:80%;"> </figure> </center>
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/6.png" style="zoom:100%;">
 
 
+
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/7.png" style="zoom:120%;">
 
 <h4 id="设置共享文件夹"><a href="#设置共享文件夹" class="headerlink" title="设置共享文件夹"></a>设置共享文件夹</h4><p>1) 为了方便，可以设置一个共享文件夹，比如D:\JAVA\LINUX\VM&amp;WINshare ；</p>
 <p>2) windows 和 contos 就可以共享文件了，但是在实际公司开发中，文件的上传下载是需要使用远程方式完成的；</p>
 <p>3) 远程方式登录，我们后面会具体讲解；</p>
 <p>具体步骤: </p>
 <p>1) 菜单-&gt;vm-&gt;setting, 如图设置即可。注意:设置选项为always enable , 这样可以读写了 </p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/7.5.png" alt="image-20200526121601662" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/7.5.png" style="zoom:67%;">
 
 <p>2) windows和centos可共享 D:\JAVA\LINUX\VM&amp;WINshare目录可以读写文件了 </p>
 <p>3)共享文件夹的位置如下：</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C8.png" alt="image-20200520173427844"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C8.png" alt></p>
 <h2 id="Linux的目录结构"><a href="#Linux的目录结构" class="headerlink" title="Linux的目录结构"></a>Linux的目录结构</h2><h3 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍:"></a>基本介绍:</h3><p>linux的文件系统是采用级层式的树状目录结构，在此结构中的最上层是根目录“/”，然后在此 目录下再创建其他的目录。</p>
 <p>记住一句经典的话：<strong>在Linux世界里，一切皆文件</strong>。</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\9.png" alt="image-20200525152205384" style="zoom: 67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/9.png" style="zoom: 67%;">
 
 
 
 <p> <strong>/bin</strong> [重点] (/usr/bin 、 /usr/local/bin)      是Binary的缩写, 这个目录存放着最经常使用的命令</p>
 <p> /sbin (/usr/sbin 、 /usr/local/sbin)      s就是Super User的意思，这里存放的是系统管理员使用的系统管理程序。</p>
 <p> <strong>/home</strong> [重点]     存放普通用户的主目录，在Linux中每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的。（下图举例如何创建与删除文件夹）</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C10.png" alt="image-20200525153346281"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C10.png" alt></p>
 <p> <strong>/root [重点]</strong>      该目录为系统管理员，也称作超级权限者的用户主目录</p>
 <p> /lib     系统开机所需要最基本的动态连接共享库，其作用类似于Windows里的DLL文件。几 乎所有的应用程序都需要用到这些共享库</p>
 <p> /lost+found    这个目录一般情况下是空的，当系统非法关机后，这里就存放了一些文件</p>
@@ -527,7 +529,7 @@
 <p>2.各个目录不要乱放文件；</p>
 <p>3.linux的各个目录存放什么内容，必须要有一个认识；</p>
 <h2 id="远程登录到Linux服务器"><a href="#远程登录到Linux服务器" class="headerlink" title="远程登录到Linux服务器"></a>远程登录到Linux服务器</h2><h3 id="为什么需要远程登录Linux？"><a href="#为什么需要远程登录Linux？" class="headerlink" title="为什么需要远程登录Linux？"></a>为什么需要远程登录Linux？</h3><p>可以通过XShell5远程登录linux，通过XFtp5上传给机房、从机房下载软件。</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\11.png" alt="image-20200525155128451" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/11.png" style="zoom:67%;">
 
 
 
@@ -540,36 +542,36 @@
 <h3 id="远程登录软件Linux-Xshell5"><a href="#远程登录软件Linux-Xshell5" class="headerlink" title="远程登录软件Linux-Xshell5"></a>远程登录软件Linux-Xshell5</h3><p> Xshell 是目前最好的远程登录到Linux操作的软件，流畅的速度并且完美解决了中文乱码的问题， 是目前程序员首选的软件。Xshell可以在Windows界面下用来访问远端不同系统下的服务器，从而比较好的达到远程控制终端的目的。</p>
 <p><strong>安装配置和使用：</strong></p>
 <p>首先想用我的电脑连接远程机房（假设本机的linux系统就是远程机房），我要知道远程机房的linux系统的ip地址，所以先查询ip：（在联网的条件下输入ifconfig）</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\12.png" alt="image-20200525163128500" style="zoom: 80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/12.png" style="zoom: 80%;">
 
 <p>然后在XShell软件中新建会话，并连接：（<strong>名称</strong>可以随便起，<strong>主机</strong>就是远程的linux系统ip地址）</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\13.png" alt="image-20200526133551379" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/13.png" style="zoom:67%;">
 
 <p>显示连接成功：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\15.png" alt="image-20200526133833967" style="zoom: 80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/15.png" style="zoom: 80%;">
 
 <p>然后XShell5就能远程控制linux：（比如建一个新的文档或者reboot等）</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C16.png" alt="image-20200526134301070"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C16.png" alt></p>
 <h3 id="远程上传下载文件Xftp5"><a href="#远程上传下载文件Xftp5" class="headerlink" title="远程上传下载文件Xftp5"></a>远程上传下载文件Xftp5</h3><p>是一个基于 windows 平台的功能强大的SFTP、FTP 文件传输软件。使用了 Xftp 以后，windows 用户能安全地在 UNIX/Linux 和 Windows PC 之间传输文 件。</p>
 <p><strong>安装配置和使用</strong></p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\17.png" alt="image-20200526141008897" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/17.png" style="zoom:67%;">
 
 
 
 <p>连接之后自动定位到远程Linux下的root目录，但是存在乱码：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\18.png" alt="image-20200526141215100" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/18.png" style="zoom:67%;">
 
 
 
 <p>按照下图解决xftp中文乱码问题：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\19.png" alt="image-20200526141455955" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/19.png" style="zoom:67%;">
 
 
 
 <p>然后找到想要传输的文件，右击传输即可出现在Linux系统目录对应位置：</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C20.png" alt="image-20200526141952916"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C20.png" alt></p>
 <p>同理在下图目录中把想要放到win的文件通过右击传输即可：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\21.png" alt="image-20200526142200018" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/21.png" style="zoom:67%;">
 
 
 
@@ -583,54 +585,64 @@
 <p>在这个模式当中， 可以提供你相关指令，完成读取、存盘、替换、离开 vim 、显示行号等的 动作则是在此模式中达成。</p>
 <h3 id="vi和vim基本使用"><a href="#vi和vim基本使用" class="headerlink" title="vi和vim基本使用"></a>vi和vim基本使用</h3><p><strong>使用 vim 开发一个 Hello.java 程序, 保存.步骤说明和演示：</strong></p>
 <p>1.通过XShell5进行远程操作Linux，首先通过<strong><em>ll</em></strong>指令看当前目录下都有哪些文件</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\22.png" alt="image-20200527102311005" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/22.png" style="zoom:67%;">
 
 <p>2.启用vim，通过命令<strong><em>vim Hello.java</em></strong>新建一个java文件，回车之后效果如左图，此时这个界面不能插入东西，因为处于正常模式，所以要进入插入模式，输入<strong><em>i</em></strong>，然后效果如右图：</p>
-<center> <figure> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\23.png" alt="1555576170074" style="zoom:50%;"> --->>> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\24.png" alt="1555576170074" style="zoom:50%;"> </figure> </center>
+<center> <figure> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/23.png" style="zoom:50%;">
+   <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/24.png" style="zoom:50%;"> </figure> </center>
 
 <p>3.在插入模式下，输入代码，效果如左图，然后需要进行存盘，所以要点Esc进入正常模式：</p>
-<center> <figure> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\25.png" alt="1555576170074" style="zoom:60%;"> --->>> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\26.png" alt="1555576170074" style="zoom:60%;"> </figure> </center>
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/25.png" style="zoom:60%;">
+
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/26.png" style="zoom:60%;">
 
 <p>4.在正常模式下输入<strong><em>:wq</em></strong>表示进入命令行模式、写入并退出，也就是保存的意思，如左图，然后通过<strong><em>ll</em></strong>查看当前目录发现Hello.java文件已经存在于目录中，如右图：</p>
-<center> <figure> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\27.png" alt="1555576170074" style="zoom:60%;"> --->>> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\28.png" alt="1555576170074" style="zoom:60%;"> </figure> </center>
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/27.png" style="zoom:60%;">
+
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/28.png" style="zoom:60%;">
 
 <p>5.然后再次输入<strong><em>vim Hello.java</em></strong>，仍然可以看见这段代码，然后输入<strong><em>：q!</em></strong>，表示退出不保存</p>
-<center> <figure> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\29.png" alt="1555576170074" style="zoom:60%;"> --->>> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\30.png" alt="1555576170074" style="zoom:60%;"> </figure> </center>
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/29.png" style="zoom:60%;">
+
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/30.png" style="zoom:60%;">
 
 
 
 <h3 id="vi和vim模式的相互切换"><a href="#vi和vim模式的相互切换" class="headerlink" title="vi和vim模式的相互切换"></a>vi和vim模式的相互切换</h3><p>wq表示保存并退出；</p>
 <p>q代表退出不保存；</p>
 <p>q！代表强制退出（对原有代码进行修改之后不想保存）</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\31.png" alt="image-20200527105018028" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/31.png" style="zoom:67%;">
 
 <p><strong>对q！进行演示</strong>：在编辑模式下对之前的代码做了一些修改，如左图，按Esc进入正常模式，然后:q!，再进入这个程序之后发现修改的内容没有被保存，如右图：</p>
-<center> <figure> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\32.png" alt="1555576170074" style="zoom:60%;"> --->>> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\33.png" alt="1555576170074" style="zoom:60%;"> </figure> </center>
+<p>​                                                <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/32.png" style="zoom:70%;"> </p>
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/33.png" style="zoom:70%;">
 
 <p><strong>对q进行演示</strong>：在编辑模式下对之前的代码做了一些修改，如下图，按Esc进入正常模式，然后<strong><em>:q</em></strong>，会出现提示信息，也就是说，如果对代码进行了修改，不想保存只能用:<strong><em>q!</em></strong>，当只是看了一眼代码并没有进行修改，才用<strong><em>:q</em></strong>：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\34.png" alt="image-20200527110541219" style="zoom: 80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/34.png" style="zoom: 80%;">
 
 
 
 <h3 id="vi和vim快捷键"><a href="#vi和vim快捷键" class="headerlink" title="vi和vim快捷键"></a>vi和vim快捷键</h3><p><strong>快捷键使用练习（OK.java）</strong></p>
 <p>*<em>1) 拷贝当前行 yy ，并粘贴；拷贝当前行向下的n行nyy，并粘贴 *</em></p>
 <p>1.1创建一个新的java文件：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\35.png" alt="image-20200527132306285" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/35.png" style="zoom:67%;">
 
 <p>1.2按i进入编辑模式，输入一些东西，按Esc之后才能进行粘贴操作：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\36.png" alt="image-20200527132509965" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/36.png" style="zoom:67%;">
 
 <p>1.3光标放到i am fanjunfeng这一行，然后输入yy（复制），再输入p（粘贴），就将第一行复制粘贴到了第二行</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\37.png" alt="image-20200527132818621" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/37.png" style="zoom:67%;">
 
 <p>1.4另外写一些东西，一共四行，如左图。现在想要将最后两行复制到第一行后边：在正常模式下，将光标放在第三行起始，输入2yy，然后光标放到想要粘贴这些内容的起点（第一行），然后按p</p>
-<center> <figure> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\38.png" alt="1555576170074" style="zoom:60%;"> --->>> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\39.png" alt="1555576170074" style="zoom:60%;"> </figure> </center>
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/38.png" style="zoom:60%;">
+
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/39.png" style="zoom:60%;">
 
 
 
 <p><strong>2) 删除当前行 dd , 删除当前行向下的5行 5dd (和复制类似）</strong></p>
 <p>2.1写一些新的内容进行操作：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\40.png" alt="image-20200527134115191" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/40.png" style="zoom:67%;">
 
 <p>2.2光标放在想删除的行，按dd即可，比如删除第五行；假如想要删除多行，光标放在想要删除的第一行，按<strong><em>nyy</em></strong>即可，比如删除第二行和第三行</p>
 <center> <figure> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\41.png" alt="1555576170074" style="zoom:60%;"> --->>> <img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\42.png" alt="1555576170074" style="zoom:60%;"> </figure> </center>
