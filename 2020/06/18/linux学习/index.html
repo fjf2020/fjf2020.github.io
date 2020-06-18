@@ -1322,13 +1322,13 @@
 
 
 <p>2) 请将 /home/aaa 目录下所有的文件和目录的所有者都修改成tom</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C148.png" alt="image-20200602164014395"></p>
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C148.png" alt></p>
 <h3 id="修改文件所在组-chgrp"><a href="#修改文件所在组-chgrp" class="headerlink" title="修改文件所在组-chgrp"></a>修改文件所在组-chgrp</h3><p><strong>基本介绍</strong> </p>
 <p>chgrp newgroup file 改变文件的所有组</p>
 <p><strong>案例演示</strong></p>
 <p>请将 /home/kkk 目录下所有的文件和目录的所在组都修改成 shaolin(少林) </p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C149.png" alt="image-20200602164226239"></p>
-<h2 id="定时任务调度"><a href="#定时任务调度" class="headerlink" title="定时任务调度"></a>定时任务调度</h2><h3 id="crond-任务调度"><a href="#crond-任务调度" class="headerlink" title="crond 任务调度"></a>crond 任务调度</h3><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\150.png" alt="image-20200603152149590" style="zoom:80%;">
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C149.png" alt></p>
+<h2 id="定时任务调度"><a href="#定时任务调度" class="headerlink" title="定时任务调度"></a>定时任务调度</h2><h3 id="crond-任务调度"><a href="#crond-任务调度" class="headerlink" title="crond 任务调度"></a>crond 任务调度</h3><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/150.png" style="zoom:80%;">
 
 <h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p><strong>任务调度</strong></p>
 <p>是指系统在某个时间执行的特定的命令或程序</p>
@@ -1336,74 +1336,73 @@
 <p>1.系统工作：有些重要的工作必须周而复始地执行。如病毒扫描等 </p>
 <p>2.个别用户工作：个别用户可能希望执行某些程序，比如对mysql数据库的备份</p>
 <h4 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h4><p>crontab [选项]</p>
-<h4 id="常用选项"><a href="#常用选项" class="headerlink" title="常用选项"></a>常用选项</h4><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\数据库\笔记图片备份\DDL\12.png" alt="image-20200603151734908" style="zoom:80%;">
-
-
-
+<h4 id="常用选项"><a href="#常用选项" class="headerlink" title="常用选项"></a>常用选项</h4><p>-e    编辑crontab定时任务</p>
+<p>-l    查询crontab任务</p>
+<p>-r    删除当前用户所有crontab任务</p>
 <h4 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h4><p><strong><em>方式1</em></strong>：设置任务调度文件：/etc/crontab </p>
 <p><strong><em>方式2</em></strong>：设置个人任务调度：执行crontab –e命令（输入crontab  -e之后回车就行）</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\151.png" alt="image-20200603152642911" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/151.png" style="zoom:80%;">
 
 <p>接着输入任务到调度文件</p>
 <p> 如：<em>/1 * * * * ls –l /etc/ &gt; /tmp/to.txt (注意</em>之间有空格)</p>
 <p>意思说每小时的每分钟执行ls –l /etc/ &gt; /tmp/to.txt命令</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\152.png" alt="152" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/152.png" style="zoom:67%;">
 
 <p>保存之后回车：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\153.png" alt="image-20200603153346042" style="zoom: 80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/153.png" style="zoom: 80%;">
 
 <p>发现/tmp目录下to.txt文件已经存在，并查看文件内容：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\154.png" alt="image-20200603153742050" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/154.png" style="zoom:67%;">
 
 
 
 <h4 id="参数细节说明"><a href="#参数细节说明" class="headerlink" title="参数细节说明"></a>参数细节说明</h4><p><strong>5个占位符的说明</strong></p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\155.png" alt="image-20200603153934395" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/155.png" style="zoom:67%;">
 
 
 
 <p><strong>特殊符号的说明</strong></p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\156.png" alt="image-20200603154114217" style="zoom: 67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/156.png" style="zoom: 67%;">
 
 
 
 <p><strong>特定时间执行任务案例</strong></p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\157.png" alt="image-20200603154152707" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/157.png" style="zoom:67%;">
 
 
 
 <h4 id="应用实例"><a href="#应用实例" class="headerlink" title="应用实例"></a>应用实例</h4><p>案例：每隔1分钟，就将当前的日期信息，追加到 /tmp/mydate 文件中（采用方式1：编写脚本文件来执行）</p>
 <p>1）编写一个脚本文件/home/mytask.sh(在/home下    通过vim    mytask.sh指令)</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\158.png" alt="image-20200603155512278" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/158.png" style="zoom:67%;">
 
 <p>此时mytask没有执行权限</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\159.png" alt="image-20200603155622630" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/159.png" style="zoom:67%;">
 
 <p>2）  给    文件mytask.sh    可执行权限（当前使用root用户操作，所以只需要给root可执行权限即可）</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\160.png" alt="image-20200603155830631" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/160.png" style="zoom:67%;">
 
 <p>3）crontab -e    </p>
 <p>4）调用脚本文件    */1 * * * * /home/mytask.sh</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\161.png" alt="image-20200603160011269" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/161.png" style="zoom:67%;">
 
 <p>5）查看mydate文件内容，（tail进行实时追踪）发现一分钟更新一次：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\162.png" alt="image-20200603160419331" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/162.png" style="zoom:67%;">
 
 
 
 <h4 id="crond-相关指令"><a href="#crond-相关指令" class="headerlink" title="crond 相关指令"></a>crond 相关指令</h4><p>1) conrtab –r：终止任务调度。 </p>
 <p>2) crontab –l：列出当前有那些任务调度 </p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\163.png" alt="image-20200603160655252" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/163.png" style="zoom:80%;">
 
 <p>3) service crond restart [重启任务调度]</p>
-<h2 id="Linux磁盘分区、挂载"><a href="#Linux磁盘分区、挂载" class="headerlink" title="Linux磁盘分区、挂载"></a>Linux磁盘分区、挂载</h2><h3 id="分区基础知识"><a href="#分区基础知识" class="headerlink" title="分区基础知识"></a>分区基础知识</h3><h4 id="windows下的磁盘分区"><a href="#windows下的磁盘分区" class="headerlink" title="windows下的磁盘分区"></a>windows下的磁盘分区</h4><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\164.png" alt="image-20200603164817523" style="zoom:80%;">
+<h2 id="Linux磁盘分区、挂载"><a href="#Linux磁盘分区、挂载" class="headerlink" title="Linux磁盘分区、挂载"></a>Linux磁盘分区、挂载</h2><h3 id="分区基础知识"><a href="#分区基础知识" class="headerlink" title="分区基础知识"></a>分区基础知识</h3><h4 id="windows下的磁盘分区"><a href="#windows下的磁盘分区" class="headerlink" title="windows下的磁盘分区"></a>windows下的磁盘分区</h4><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/164.png" style="zoom:80%;">
 
 
 
 <h3 id="Linux分区"><a href="#Linux分区" class="headerlink" title="Linux分区"></a>Linux分区</h3><h4 id="原理介绍"><a href="#原理介绍" class="headerlink" title="原理介绍"></a>原理介绍</h4><p>1) Linux来说无论有几个分区，分给哪一目录使用，它归根结底就只有一个根目录，一个独 立且唯一的文件结构 , Linux中每个分区都是用来组成整个文件系统的一部分。</p>
 <p>2) Linux采用了一种叫“载入”的处理方法，它的整个文件系统中包含了一整套的文件和目 录，且将一个分区和一个目录联系起来。这时要载入的一个分区将使它的存储空间在一 个目录下获得。</p>
 <p>3) 示意图</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\165.png" alt="image-20200603165217259" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/165.png" style="zoom:67%;">
 
 
 
@@ -1411,10 +1410,10 @@
 <p>2) 对于IDE硬盘，驱动器标识符为“hdx<del>”,其中“hd”表明分区所在设备的类型，这里是指 IDE硬盘了。“x”为盘号（a为基本盘，b为基本从属盘，c为辅助主盘，d为辅助从属盘）,“</del>”代表分区，前四个分区用数字1到4表示，它们是主分区或扩展分区，从5开始就 是逻辑分区。例，hda3表示为第一个IDE硬盘上的第三个主分区或扩展分区,hdb2表示为 第二个IDE硬盘上的第二个主分区或扩展分区</p>
 <p>3) 对于SCSI硬盘则标识为“sdx~”，SCSI硬盘是用“sd”来表示分区所在设备的类型的，其余 则和IDE硬盘的表示方法一样</p>
 <h4 id="查看所有设备挂载情况"><a href="#查看所有设备挂载情况" class="headerlink" title="查看所有设备挂载情况"></a>查看所有设备挂载情况</h4><p>命令 ：lsblk 或者 lsblk -f（记忆方法：老师不离开）</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\166.png" alt="image-20200603170201537" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/166.png" style="zoom:80%;">
 
 <p>说明：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\167.png" alt="image-20200603170323931" style="zoom: 67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/167.png" style="zoom: 67%;">
 
 
 
@@ -1422,7 +1421,7 @@
 
 <h3 id="磁盘情况查询"><a href="#磁盘情况查询" class="headerlink" title="磁盘情况查询"></a>磁盘情况查询</h3><h4 id="查询系统整体磁盘使用情况"><a href="#查询系统整体磁盘使用情况" class="headerlink" title="查询系统整体磁盘使用情况"></a>查询系统整体磁盘使用情况</h4><p><strong>基本语法</strong> </p>
 <p>df -h</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\168.png" alt="image-20200603170652681" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/168.png" style="zoom:80%;">
 
 
 
@@ -1436,7 +1435,7 @@
 <p>​        -c 列出明细的同时，增加汇总值</p>
 <p><strong>应用实例</strong> </p>
 <p>查询 /opt 目录的磁盘占用情况，深度为1</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\169.png" alt="image-20200603171227640" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/169.png" style="zoom:80%;">
 
 
 
@@ -1444,32 +1443,32 @@
 
 <h3 id="磁盘情况-工作实用指令"><a href="#磁盘情况-工作实用指令" class="headerlink" title="磁盘情况-工作实用指令"></a>磁盘情况-工作实用指令</h3><p>注意：“-”表示文件，“d”表示目录</p>
 <p>1) 统计/home文件夹下文件的个数（wc表示统计） </p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\170.png" alt="image-20200603171803095" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/170.png" style="zoom:67%;">
 
 <p>2) 统计/home文件夹下目录的个数 </p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\171.png" alt="image-20200603171910630" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/171.png" style="zoom:80%;">
 
 <p>3) 统计/home文件夹下的文件个数，包括子文件夹里的 （R表示递归统计）</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\172.png" alt="image-20200603172141945" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/172.png" style="zoom:80%;">
 
 <p>4) 统计/home文件夹下目录的个数，包括子文件夹里的 </p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\173.png" alt="image-20200603172338256" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/173.png" style="zoom:80%;">
 
 <p>5) 以树状显示目录结构</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\174.png" alt="image-20200603172611181" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/174.png" style="zoom:80%;">
 
 
 
 
 
 <h2 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h2><h3 id="Linux网络配置原理图"><a href="#Linux网络配置原理图" class="headerlink" title="Linux网络配置原理图"></a>Linux网络配置原理图</h3><p>目前网络配置采用的是NAT。</p>
-<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/D:%5CJAVA%5CLINUX%5Clinux%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD%5C175.png" alt="image-20200604145106397"></p>
-<h3 id="查看网络IP和网关"><a href="#查看网络IP和网关" class="headerlink" title="查看网络IP和网关"></a>查看网络IP和网关</h3><h4 id="查看虚拟网络编辑器"><a href="#查看虚拟网络编辑器" class="headerlink" title="查看虚拟网络编辑器"></a>查看虚拟网络编辑器</h4><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\176.png" alt="image-20200604145805414" style="zoom:80%;">
+<p><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0%5C175.png" alt></p>
+<h3 id="查看网络IP和网关"><a href="#查看网络IP和网关" class="headerlink" title="查看网络IP和网关"></a>查看网络IP和网关</h3><h4 id="查看虚拟网络编辑器"><a href="#查看虚拟网络编辑器" class="headerlink" title="查看虚拟网络编辑器"></a>查看虚拟网络编辑器</h4><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/176.png" style="zoom:80%;">
 
 <h4 id="修改ip地址"><a href="#修改ip地址" class="headerlink" title="修改ip地址"></a>修改ip地址</h4><p>当前linux系统的IP地址为192.168.158.1。可以通过下图的子网修改虚拟机虚拟网卡vmnet8的IP地址。</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\177.png" alt="image-20200604145922037" style="zoom:50%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/177.png" style="zoom:50%;">
 
-<h4 id="查看网关"><a href="#查看网关" class="headerlink" title="查看网关"></a>查看网关</h4><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\178.png" alt="image-20200604150245143" style="zoom:50%;">
+<h4 id="查看网关"><a href="#查看网关" class="headerlink" title="查看网关"></a>查看网关</h4><img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/178.png" style="zoom:50%;">
 
 
 
@@ -1477,7 +1476,7 @@
 <p>ping 目的主机 （功能描述：测试当前服务器是否可以连接目的主机）</p>
 <p><strong>应用实例</strong></p>
 <p> 测试当前服务器是否可以连接百度</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\179.png" alt="image-20200604150614544" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/179.png" style="zoom:67%;">
 
 
 
@@ -1489,18 +1488,18 @@
 <p>步骤：</p>
 <p>1.系统–&gt;&gt;首选项–&gt;&gt;网络连接</p>
 <p>2.</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\180.png" alt="image-20200604151152398" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/180.png" style="zoom:67%;">
 
 
 
 <h4 id="第二种方法-指定固定的ip"><a href="#第二种方法-指定固定的ip" class="headerlink" title="第二种方法(指定固定的ip)"></a>第二种方法(指定固定的ip)</h4><p>第一种方法每次自动获取的IP地址不一致，不适用于作为服务器，因为服务器的ip需要固定。</p>
 <p><strong>说明：</strong> 直接修改配置文件来指定IP,并可以连接到外网(程序员推荐)，编辑 vi m/etc/sysconfig/network-scripts/ifcfg-eth0 要求：将ip地址配置为静态的，ip地址为192.168.158.130</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\181.png" alt="image-20200604152509093" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/181.png" style="zoom:67%;">
 
 <p><strong>重启网络服务或者重启系统生效</strong></p>
 <p>service network restart 、reboot。</p>
 <p>重启之后使用ifconfig指令查看linux的IP地址为192.168.158.130，成功。</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\182.png" alt="image-20200604152931097" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/182.png" style="zoom:80%;">
 
 
 
@@ -1512,17 +1511,17 @@
 <p> 4) 一般系统的服务都是以后台进程的方式存在，而且都会常驻在系统中。直到关机才才结束。</p>
 <h3 id="显示系统执行的进程"><a href="#显示系统执行的进程" class="headerlink" title="显示系统执行的进程"></a>显示系统执行的进程</h3><h4 id="基本介绍-3"><a href="#基本介绍-3" class="headerlink" title="基本介绍"></a>基本介绍</h4><p>ps命令是用来查看目前系统中，有哪些正在执行，以及它们执行的状况。可以不加任何参数。</p>
 <p>一般来说，使用的参数是 ps -aux。</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\183.png" alt="image-20200604163645306" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/183.png" style="zoom:67%;">
 
 <p>ps    -a：显示当前终端的所有进程信息</p>
 <p>ps    -u：以用户的格式显示进程信息</p>
 <p>ps    -x：显示后台进程运行的参数</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\184.png" alt="image-20200604164212451" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/184.png" style="zoom:67%;">
 
 
 
 <h4 id="ps详解"><a href="#ps详解" class="headerlink" title="ps详解"></a>ps详解</h4><p>1) 指令：ps –aux|grep xxx ，比如我看看有没有sshd服务</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\185.png" alt="image-20200604164605733" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/185.png" style="zoom:80%;">
 
 
 
@@ -1552,7 +1551,7 @@
 <p>​        • TTY：完整的终端名称 </p>
 <p>​        • TIME：CPU时间 </p>
 <p>​        • CMD：启动进程所用的命令和参数</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\186.png" alt="image-20200604165537313" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/186.png" style="zoom:67%;">
 
 
 
@@ -1564,20 +1563,20 @@
 <h4 id="常用选项-1"><a href="#常用选项-1" class="headerlink" title="常用选项"></a>常用选项</h4><p>-9 :表示强迫进程立即停止</p>
 <h4 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h4><p>案例1：踢掉某个非法登录用户 </p>
 <p>​        1.1首先使用非root用户登录：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\187.png" alt="image-20200604170221652" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/187.png" style="zoom:67%;">
 
 <p>​        1.2在root用户通过指令查进程：发现进程号为5275</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\188.png" alt="image-20200604170447763" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/188.png" style="zoom:67%;">
 
 <p>​        1.3杀进程</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\189.png" alt="image-20200604170632622" style="zoom: 67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/189.png" style="zoom: 67%;">
 
 
 
 <p>案例2：强制杀掉当前终端</p>
 <p>/bin/bash：就表示终端</p>
 <p>直接kill发现杀不掉，所以要加-9，回车之后当前终端就被杀掉了。</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\190.png" alt="image-20200604171339281" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/190.png" style="zoom:67%;">
 
 
 
@@ -1587,28 +1586,28 @@
 <h4 id="常用选项-2"><a href="#常用选项-2" class="headerlink" title="常用选项"></a>常用选项</h4><p>-p :显示进程的PID </p>
 <p>-u :显示进程的所属用户</p>
 <h4 id="应用实例-2"><a href="#应用实例-2" class="headerlink" title="应用实例"></a>应用实例</h4><p>案例1：请你树状的形式显示进程的pid </p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\191.png" alt="image-20200604171805246" style="zoom: 67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/191.png" style="zoom: 67%;">
 
 
 
 <p>案例2：请你树状的形式显示进程的用户id</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\192.png" alt="image-20200604171927586" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/192.png" style="zoom:67%;">
 
 
 
 
 
 <h3 id="服务-service-管理"><a href="#服务-service-管理" class="headerlink" title="服务(service)管理"></a>服务(service)管理</h3><h4 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h4><p>服务(service) 本质就是进程，但是是运行在后台的，通常都会监听某个端口，等待其它程 序的请求，比如(mysql , sshd 防火墙等)，因此我们又称为守护进程，是Linux中非常重要的 知识点。【原理图】</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\193.png" alt="image-20200605151735641" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/193.png" style="zoom:67%;">
 
 
 
 <h4 id="service管理指令"><a href="#service管理指令" class="headerlink" title="service管理指令"></a>service管理指令</h4><p>service 服务名 [start | stop | restart | reload | status] </p>
 <p>在CentOS7.0后 不再使用service ,而是 systemctl</p>
 <h4 id="使用案例"><a href="#使用案例" class="headerlink" title="使用案例"></a>使用案例</h4><p> 查看当前防火墙的状况，关闭防火墙和重启防火墙。</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\194.png" alt="image-20200605152715860" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/194.png" style="zoom:67%;">
 
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\195.png" alt="image-20200605152817490" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/195.png" style="zoom:67%;">
 
 
 
@@ -1616,10 +1615,8 @@
 <p>2) 这种方式只是临时生效，当重启系统后，还是回归以前对服务的设置。 </p>
 <p>3) 如果希望设置某个服务自启动或关闭永久生效，要使用chkconfig指令，马上讲。</p>
 <h4 id="查看服务名"><a href="#查看服务名" class="headerlink" title="查看服务名"></a>查看服务名</h4><p>方式1：使用setup 回车，选系统服务 就可以看到。 </p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/Users\john\AppData\Roaming\Typora\typora-user-images\image-20200605153425072.png" alt="image-20200605153425072" style="zoom: 67%;">
-
 <p>方式2: /etc/init.d/服务名称</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\196.png" alt="image-20200605153603134" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/196.png" style="zoom:80%;">
 
 
 
@@ -1640,16 +1637,16 @@
 <p><strong>基本语法</strong></p>
 <p>1.1)  查看所有服务各个运行级别是否启动 chkconfig –list</p>
 <p>1.1)  查看某个服务的各个运行级别是否启动 chkconfig –list|grep xxx </p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\197.png" alt="image-20200605154852330" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/197.png" style="zoom:67%;">
 
 <p>2) chkconfig 服务名 –list </p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\198.png" alt="image-20200605155140567" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/198.png" style="zoom:67%;">
 
 <p>3) chkconfig –level 5 服务名 on/off （设置改服务在指定运行级别开启或者关闭）</p>
 <p><strong>使用细节</strong></p>
 <p> chkconfig重新设置服务后自启动或关闭，需要重启机器reboot才能生效.</p>
 <h3 id="检测主机连接命令ping："><a href="#检测主机连接命令ping：" class="headerlink" title="检测主机连接命令ping："></a>检测主机连接命令ping：</h3><p>是一种网络检测检测工具，它主要是用检测远程主机是否正常，或是两部主机间的介质是否为断、网线是否脱落或网卡故障。 如: ping 对方ip地址</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\201.png" alt="image-20200605160613236" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/201.png" style="zoom:80%;">
 
 
 
@@ -1662,7 +1659,7 @@
 <p>Linux的分发版本都有采用（suse,redhat, centos 等等），可以算是公认的行业标准了。</p>
 <p><strong>rpm包的简单查询指令</strong>（如果没有查询结果，什么也不返回）</p>
 <p>查询已安装的rpm列表 rpm –qa|grep xx</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\202.png" alt="image-20200605210143117" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/202.png" style="zoom:80%;">
 
 <p><strong>rpm包名基本格式</strong></p>
 <p>一个rpm包名：firefox-45.0.1-1.el6.centos.x86_64.rpm </p>
@@ -1675,7 +1672,7 @@
 <p>rpm -qa :查询所安装的所有rpm软件包 （分页查询：rpm -qa | more ）</p>
 <p>rpm -q 软件包名 :查询软件包是否安装（相当于rpm   -qa  |  grep  xxx）</p>
 <p>rpm -qi 软件包名 ：查询软件包信息</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\203.png" alt="image-20200605210828074" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/203.png" style="zoom:67%;">
 
 <p>rpm -ql 软件包名 :查询软件包中的文件</p>
 <p><strong>卸载rpm包</strong></p>
@@ -1690,16 +1687,16 @@
 <p>*<em>应用实例 *</em></p>
 <p>演示安装firefox浏览器（安装的步骤：先挂载上安装centos的iso文件，然后到/media/下的packages找到firefox的安装rpm包，复制到合适的目录，）</p>
 <p>1.挂载的时候一定要勾选“已连接”。该iso文件在media下。</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\204.png" alt="image-20200605211916226" style="zoom: 67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/204.png" style="zoom: 67%;">
 
 <p>2.进入packages目录</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\206.png" alt="image-20200605212727035" style="zoom:67%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/206.png" style="zoom:67%;">
 
 <p>3.找到firefox安装包，复制到opt目录</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\208.png" alt="image-20200605213630973" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/208.png" style="zoom:80%;">
 
 <p>4.进行安装，安装完成就可以正常使用了。</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\209.png" alt="image-20200605213945299" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/209.png" style="zoom:80%;">
 
 
 
@@ -1710,7 +1707,7 @@
 <p>​            yum install xxx 下载安装</p>
 <p><strong>yum应用实例</strong> </p>
 <p>使用yum的方式来安装firefox（因为之前装过，需要先卸载）</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\210.png" alt="image-20200605214807263" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/210.png" style="zoom:80%;">
 
 
 
@@ -1719,7 +1716,7 @@
 
 
 <h1 id="JAVAEE"><a href="#JAVAEE" class="headerlink" title="JAVAEE"></a>JAVAEE</h1><p>如果需要在Linux下进行JavaEE的开发，我们需要安装如下软件：</p>
-<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/JAVA\LINUX\linux笔记图片备份\javaee\1.png" alt="image-20200606132404896" style="zoom:80%;">
+<img src="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/javaee\1.png" style="zoom:80%;">
 
 
 
