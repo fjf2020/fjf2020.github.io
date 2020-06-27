@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="调整rwnd和cwnd的大小, Blog of 樊俊峰&amp;李楠楠">
+    <meta name="keywords" content="锁, Blog of 樊俊峰&amp;李楠楠">
     <meta name="description" content="用来记录生活与学习心得">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>调整rwnd和cwnd的大小 | Blog of 樊俊峰&amp;李楠楠</title>
+    <title>锁 | Blog of 樊俊峰&amp;李楠楠</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -306,12 +306,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">调整rwnd和cwnd的大小</h1>
+                    <h1 class="description center-align post-title">锁</h1>
                 </div>
             </div>
         </div>
@@ -440,7 +440,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-26
+                    2020-06-27
                 </div>
                 
 
@@ -457,18 +457,62 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="如何理性的调整「rwnd」和「cwnd」的大小"><a href="#如何理性的调整「rwnd」和「cwnd」的大小" class="headerlink" title="如何理性的调整「rwnd」和「cwnd」的大小"></a>如何理性的调整「rwnd」和「cwnd」的大小</h1><h2 id="流量控制"><a href="#流量控制" class="headerlink" title="流量控制"></a>流量控制</h2><p>传输数据的时候，如果发送方传输的数据量超过了接收方的处理能力，那么接收方会出现丢包。为了避免出现此类问题，流量控制要求数据传输双方在每次交互时声明各自的接收窗口「rwnd」大小，用来表示自己最大能保存多少数据，这主要是针对接收方而言的，通俗点儿说就是让发送方知道接收方能吃几碗饭，如果窗口衰减到零，那么就说明吃饱了，必须消化消化，如果硬撑的话说不定会大小便失禁，那就是丢包了。</p>
-<p>接收方和发送方的称呼是相对的，如果站在用户的角度看：当浏览网页时，数据以下行为主，此时客户端是接收方，服务端是发送方；当上传文件时，数据以上行为主，此时客户端是发送方，服务端是接收方。</p>
-<h2 id="慢启动"><a href="#慢启动" class="headerlink" title="慢启动"></a>慢启动</h2><p>虽然流量控制可以避免发送方过载接收方，但是却无法避免过载网络，这是因为接收窗口「rwnd」只反映了服务器个体的情况，却无法反映网络整体的情况。</p>
-<p>为了避免过载网络的问题，慢启动引入了拥塞窗口「cwnd」的概念，用来表示发送方在得到接收方确认前，最大允许传输的未经确认的数据。「cwnd」同「rwnd」相比不同的是：它只是发送方的一个内部参数，无需通知给接收方，其初始值往往比较小，然后随着数据包被接收方确认，窗口成倍扩大，有点类似于拳击比赛，开始时不了解敌情，往往是次拳试探，慢慢心里有底了，开始逐渐加大重拳进攻的力度。</p>
-<p><img src="/2020/06/26/%E8%B0%83%E6%95%B4rwnd%E5%92%8Ccwnd%E7%9A%84%E5%A4%A7%E5%B0%8F/1.png" alt="image-20200626100241126"></p>
-<p>在慢启动的过程中，随着「cwnd」的增加，可能会出现网络过载，其外在表现就是丢包，一旦出现此类问题，「cwnd」的大小会迅速衰减，以便网络能够缓过来。</p>
-<p><strong>说明：</strong>网络中实际传输的未经确认的数据大小取决于「rwnd」和「cwnd」中的小值。</p>
-<h2 id="拥塞避免"><a href="#拥塞避免" class="headerlink" title="拥塞避免"></a>拥塞避免</h2><p>从慢启动的介绍中，我们能看到，发送方通过对「cwnd」大小的控制，能够避免网络过载，在此过程中，丢包与其说是一个网络问题，倒不如说是一种反馈机制，通过它我们可以感知到发生了网络拥塞，进而调整数据传输策略，实际上，这里还有一个慢启动阈值「ssthresh」的概念，如果「cwnd」小于「ssthresh」，那么表示在慢启动阶段；如果「cwnd」大于「ssthresh」，那么表示在拥塞避免阶段，此时「cwnd」不再像慢启动阶段那样呈指数级整整，而是趋向于线性增长，以期避免网络拥塞，此阶段有多种算法实现，通常保持缺省即可。</p>
-<h2 id="「rwnd」"><a href="#「rwnd」" class="headerlink" title="「rwnd」"></a>「rwnd」</h2><p>有很多人都遇到过网络传输速度过慢的<a href="http://www.onlamp.com/pub/a/onlamp/2005/11/17/tcp_tuning.html" target="_blank" rel="noopener">问题</a>，比如说明明是百兆网络，其最大传输数据的理论值怎么着也得有个十兆，但是实际情况却相距甚远，可能只有一兆。此类问题如果剔除奸商因素，多半是由于接收窗口「rwnd」设置不合理造成的。</p>
-<h2 id="「cwnd」"><a href="#「cwnd」" class="headerlink" title="「cwnd」"></a>「cwnd」</h2><p>一般来说「cwnd」的初始值取决于<a href="http://en.wikipedia.org/wiki/Maximum_segment_size" target="_blank" rel="noopener">MSS</a>的大小</p>
-<p>当我们浏览视频或者下载软件的时候，「cwnd」初始值的影响并不明显，这是因为传输的数据量比较大，时间比较长，相比之下，即便慢启动阶段「cwnd」初始值比较小，也会在相对很短的时间内加速到满窗口，基本上可以忽略不计。</p>
-<p>不过当我们浏览网页的时候，情况就不一样了，这是因为传输的数据量比较小，时间比较短，相比之下，如果慢启动阶段「cwnd」初始值比较小，那么很可能还没来得及加速到满窗口，通讯就结束了。</p>
+                <h1 id="锁"><a href="#锁" class="headerlink" title="锁"></a>锁</h1><h2 id="0、synchronized与Lock"><a href="#0、synchronized与Lock" class="headerlink" title="0、synchronized与Lock"></a>0、synchronized与Lock</h2><p>Java中有两种加锁的方式：一种是用<strong>synchronized关键字</strong>，另一种是用<strong>Lock接口</strong>的实现类。</p>
+<p>形象地说，synchronized关键字是<strong>自动档</strong>，可以满足一切日常驾驶需求。但是如果你想要玩漂移或者各种骚操作，就需要<strong>手动档</strong>了——各种Lock的实现类。</p>
+<p>所以如果你只是想要简单的加个锁，对性能也没什么特别的要求，用synchronized关键字就足够了。自Java 5之后，才在java.util.concurrent.locks包下有了另外一种方式来实现锁，那就是Lock。也就是说，<strong>synchronized是Java语言内置的关键字，而Lock是一个接口</strong>，这个接口的实现类在代码层面实现了锁的功能。</p>
+<img src="/2020/06/27/%E9%94%81/1.png" alt="image-20200627185538498" style="zoom:80%;">
+
+
+
+<p><strong>ReentrantLock、ReadLock、WriteLock</strong> 是Lock接口最重要的三个实现类。对应了“可重入锁”、“读锁”和“写锁”，后面会讲它们的用途。</p>
+<p>ReadWriteLock其实是一个工厂接口，而ReentrantReadWriteLock是ReadWriteLock的实现类，它包含两个静态内部类ReadLock和WriteLock。这两个静态内部类又分别实现了Lock接口。</p>
+<h2 id="一、悲观锁与乐观锁"><a href="#一、悲观锁与乐观锁" class="headerlink" title="一、悲观锁与乐观锁"></a>一、悲观锁与乐观锁</h2><p>锁的一种宏观分类方式是<strong>悲观锁</strong>和<strong>乐观锁</strong>。悲观锁与乐观锁<strong>并不是特指某个锁</strong>（Java中没有哪个Lock实现类就叫PessimisticLock或OptimisticLock），而是在<span style="color:red"><strong>并发情况下的两种不同策略。</strong></span></p>
+<p>悲观锁（Pessimistic Lock）, 就是很悲观，每次去拿数据的时候都认为别人会修改。所以每次在拿数据的时候都会上锁。这样别人想拿数据就被挡住，直到悲观锁被释放。</p>
+<p>乐观锁（Optimistic Lock）, 就是很乐观，每次去拿数据的时候都认为别人不会修改。所以<strong>不会上锁，不会上锁！</strong>但是如果想要更新数据，则会在<strong>更新前检查在读取至更新这段时间别人有没有修改过这个数据</strong>。如果修改过，则重新读取，再次尝试更新，循环上述步骤直到更新成功（当然也允许更新失败的线程放弃操作）。</p>
+<p><strong>悲观锁阻塞事务，乐观锁回滚重试</strong>，它们各有优缺点，不要认为一种一定好于另一种。像乐观锁适用于写比较少的情况下，即冲突真的很少发生的时候，这样可以省去锁的开销，加大了系统的整个吞吐量。但如果经常产生冲突，上层应用会不断的进行重试，这样反倒是降低了性能，所以这种情况下用悲观锁就比较合适。</p>
+<h2 id="二、乐观锁的基础——CAS"><a href="#二、乐观锁的基础——CAS" class="headerlink" title="二、乐观锁的基础——CAS"></a>二、乐观锁的基础——CAS</h2><p>说到乐观锁，就必须提到一个概念：<strong>CAS</strong></p>
+<p>什么是CAS呢？Compare-and-Swap，即<strong>比较并替换</strong>。</p>
+<p>1、比较：读取到了一个值A，在将其更新为B之前，检查原值是否仍为A（未被其他线程改动）。</p>
+<p>2、设置：如果是，将A更新为B，结束。如果不是，则什么都不做。</p>
+<p>上面的两步操作是原子性的，可以简单地理解为瞬间完成，在CPU看来就是一步操作。</p>
+<p>有了CAS，就可以实现一个<strong>乐观锁</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">data = <span class="number">123</span>; <span class="comment">// 共享数据</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 更新数据的线程会进行如下操作 */</span></span><br><span class="line">flag = <span class="keyword">true</span>;</span><br><span class="line"><span class="keyword">while</span> (flag) &#123;</span><br><span class="line">    oldValue = data; <span class="comment">// 保存原始数据</span></span><br><span class="line">    newValue = doSomething(oldValue); </span><br><span class="line"></span><br><span class="line">    <span class="comment">// 下面的部分为CAS操作，尝试更新data的值</span></span><br><span class="line">    <span class="keyword">if</span> (data == oldValue) &#123; <span class="comment">// 比较</span></span><br><span class="line">        data = newValue; <span class="comment">// 设置</span></span><br><span class="line">        flag = <span class="keyword">false</span>; <span class="comment">// 结束</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">	<span class="comment">// 啥也不干，循环重试</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">   很明显，这样的代码根本不是原子性的，</span></span><br><span class="line"><span class="comment">   因为真正的CAS利用了CPU指令，</span></span><br><span class="line"><span class="comment">   这里只是为了展示执行流程，本意是一样的。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p>这是一个简单直观的乐观锁实现，它允许多个线程同时读取（因为根本没有加锁操作），但是只有一个线程可以成功更新数据，并导致其他要更新数据的线程回滚重试。 CAS利用CPU指令，从硬件层面保证了操作的原子性，以达到类似于锁的效果。</p>
+<p>因为整个过程中并没有“加锁”和“解锁”操作，因此乐观锁策略也被称为<strong>无锁编程</strong>。换句话说，乐观锁其实不是“锁”，它仅仅是一个循环重试CAS的算法而已！</p>
+<h2 id="三、自旋锁"><a href="#三、自旋锁" class="headerlink" title="三、自旋锁"></a>三、自旋锁</h2><p>有一种锁叫<strong>自旋锁</strong>。所谓自旋，说白了就是一个 while(true) 无限循环。</p>
+<p>刚刚的乐观锁就有类似的无限循环操作，那么它是自旋锁吗？不是。尽管自旋与 while(true) 的操作是一样的，但还是应该将这两个术语分开。“自旋”这两个字，特指自旋锁的自旋。</p>
+<h2 id="四、synchronized锁升级：偏向锁-→-轻量级锁-→-重量级锁"><a href="#四、synchronized锁升级：偏向锁-→-轻量级锁-→-重量级锁" class="headerlink" title="四、synchronized锁升级：偏向锁 → 轻量级锁 → 重量级锁"></a>四、synchronized锁升级：偏向锁 → 轻量级锁 → 重量级锁</h2><p>前面提到，synchronized关键字就像是汽车的<strong>自动档，</strong>现在详细讲这个过程。一脚油门踩下去，synchronized会从<strong>无锁</strong>升级为<strong>偏向锁</strong>，再升级为<strong>轻量级锁</strong>，最后升级为<strong>重量级锁</strong>，就像自动换挡一样。那么自旋锁在哪里呢？这里的轻量级锁就是一种<strong>自旋锁</strong>。</p>
+<p>初次执行到synchronized代码块的时候，锁对象变成<strong>偏向锁</strong>（通过CAS修改对象头里的锁标志位），字面意思是“偏向于第一个获得它的线程”的锁。执行完同步代码块后，线程并<strong>不会主动释放偏向锁</strong>。当第二次到达同步代码块时，线程会判断此时持有锁的线程是否就是自己（持有锁的线程ID也在对象头里），如果是则正常往下执行。<strong>由于之前没有释放锁，这里也就不需要重新加锁。</strong>如果自始至终使用锁的线程只有一个，很明显偏向锁几乎没有额外开销，性能极高。</p>
+<p>一旦有第二个线程加入<strong>锁竞争</strong>，偏向锁就升级为<strong>轻量级锁（自旋锁）</strong>。这里要明确一下什么是锁竞争：如果多个线程轮流获取一个锁，但是每次获取锁的时候都很顺利，没有发生阻塞，那么就不存在锁竞争。只有当某线程尝试获取锁的时候，发现该锁已经被占用，只能等待其释放，这才发生了锁竞争。</p>
+<p>在轻量级锁状态下继续锁竞争，没有抢到锁的线程将<strong>自旋</strong>，即不停地循环判断锁是否能够被成功获取。获取锁的操作，其实就是通过CAS修改对象头里的锁标志位。先<strong>比较</strong>当前锁标志位是否为“释放”，如果是则将其<strong>设置</strong>为“锁定”，比较并设置是<strong>原子性</strong>发生的。这就算抢到锁了，然后线程将当前锁的持有者信息修改为自己。</p>
+<p>长时间的自旋操作是非常消耗资源的，一个线程持有锁，其他线程就只能在原地空耗CPU，执行不了任何有效的任务，这种现象叫做<strong>忙等（busy-waiting）</strong>。如果多个线程用一个锁，但是没有发生锁竞争，或者发生了很轻微的锁竞争，那么synchronized就用轻量级锁，允许短时间的忙等现象。这是一种折衷的想法，<strong>短时间的忙等，换取线程在用户态和内核态之间切换的开销。</strong></p>
+<p>显然，此忙等是有限度的（有个计数器记录自旋次数，默认允许循环10次，可以通过虚拟机参数更改）。如果锁竞争情况严重，某个达到最大自旋次数的线程，会将轻量级锁升级为<strong>重量级锁</strong>（依然是CAS修改锁标志位，但不修改持有锁的线程ID）。当后续线程尝试获取锁时，发现被占用的锁是重量级锁，则直接将自己挂起（而不是忙等），等待将来被唤醒。在JDK1.6之前，synchronized直接加重量级锁，很明显现在得到了很好的优化。</p>
+<p><span style="color:red">一个锁只能按照 偏向锁、轻量级锁、重量级锁的顺序逐渐升级（也有叫<strong>锁膨胀</strong>的），不允许降级。</span></p>
+<blockquote>
+<p>偏向锁的一个特性是，持有锁的线程在执行完同步代码块时不会释放锁。那么当第二个线程执行到这个synchronized代码块时是否一定会发生锁竞争然后升级为轻量级锁呢？<br>线程A第一次执行完同步代码块后，当线程B尝试获取锁的时候，发现是偏向锁，会判断线程A是否仍然存活。<strong>如果线程A仍然存活，</strong>将线程A暂停，此时偏向锁升级为轻量级锁，之后线程A继续执行，线程B自旋。但是<strong>如果判断结果是线程A不存在了</strong>，则线程B持有此偏向锁，锁不升级。</p>
+</blockquote>
+<h2 id="五、可重入锁（递归锁）"><a href="#五、可重入锁（递归锁）" class="headerlink" title="五、可重入锁（递归锁）"></a>五、可重入锁（递归锁）</h2><p>可重入锁的字面意思是“可以重新进入的锁”，即<strong>允许同一个线程多次获取同一把锁</strong>。比如一个递归函数里有加锁操作，递归过程中这个锁会阻塞自己吗？如果不会，那么这个锁就是<strong>可重入锁</strong>（因为这个原因可重入锁也叫做<strong>递归锁</strong>）<strong>。</strong></p>
+<p>Java里只要以Reentrant开头命名的锁都是可重入锁，而且<strong>JDK提供的所有现成的Lock实现类，包括synchronized关键字锁都是可重入的。</strong>如果你需要不可重入锁，只能自己去实现了。网上不可重入锁的实现真的很多，就不在这里贴代码了。99%的业务场景用可重入锁就可以了.</p>
+<h2 id="六、公平锁、非公平锁"><a href="#六、公平锁、非公平锁" class="headerlink" title="六、公平锁、非公平锁"></a>六、公平锁、非公平锁</h2><p>如果多个线程申请一把<strong>公平锁</strong>，那么当锁释放的时候，先申请的先得到，非常公平。显然如果是<strong>非公平锁</strong>，后申请的线程可能先获取到锁，是随机或者按照其他优先级排序的。</p>
+<p>对ReentrantLock类而言，通过构造函数传参<strong>可以指定该锁是否是公平锁，默认是非公平锁</strong>。一般情况下，非公平锁的吞吐量比公平锁大，如果没有特殊要求，优先使用非公平锁。</p>
+<p>对于synchronized而言，它也是一种<strong>非公平锁</strong>，但是并没有任何办法使其变成公平锁。</p>
+<h2 id="七、可中断锁"><a href="#七、可中断锁" class="headerlink" title="七、可中断锁"></a>七、可中断锁</h2><p>可中断锁，字面意思是“可以<strong>响应中断</strong>的锁”。</p>
+<p>这里的关键是理解什么是<strong>中断</strong>。Java并没有提供任何直接中断某线程的方法，只提供了<strong>中断机制</strong>。何谓“中断机制”？线程A向线程B发出“请你停止运行”的请求（线程B也可以自己给自己发送此请求），但线程B并不会立刻停止运行，而是自行选择合适的时机以自己的方式响应中断，也可以直接忽略此中断。也就是说，Java的<strong>中断不能直接终止线程</strong>，而是需要被中断的线程自己决定怎么处理。</p>
+<p>回到锁的话题上来，如果线程A持有锁，线程B等待获取该锁。由于线程A持有锁的时间过长，线程B不想继续等待了，我们可以让线程B中断自己或者在别的线程里中断它，这种就是<strong>可中断锁</strong>。</p>
+<p>在Java中，synchronized就是<strong>不可中断锁</strong>，而Lock的实现类都是<strong>可中断锁，</strong>可以简单看下Lock接口。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Lock接口 */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Lock</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">lock</span><span class="params">()</span></span>; <span class="comment">// 拿不到锁就一直等，拿到马上返回。</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">lockInterruptibly</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException</span>; <span class="comment">// 拿不到锁就一直等，如果等待时收到中断请求，则需要处理InterruptedException。</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">tryLock</span><span class="params">()</span></span>; <span class="comment">// 无论拿不拿得到锁，都马上返回。拿到返回true，拿不到返回false。</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">tryLock</span><span class="params">(<span class="keyword">long</span> time, TimeUnit unit)</span> <span class="keyword">throws</span> InterruptedException</span>; <span class="comment">// 同上，可以自定义等待的时间。</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">unlock</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">Condition <span class="title">newCondition</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="八、读写锁、共享锁、互斥锁"><a href="#八、读写锁、共享锁、互斥锁" class="headerlink" title="八、读写锁、共享锁、互斥锁"></a>八、读写锁、共享锁、互斥锁</h2><p>读写锁其实是一对锁，一个读锁（共享锁）和一个写锁（互斥锁、排他锁）。</p>
+<p>记得之前的乐观锁策略吗？所有线程随时都可以读，仅在写之前判断值有没有被更改。</p>
+<p>读写锁其实做的事情是一样的，但是策略稍有不同。很多情况下，线程知道自己读取数据后，是否是为了更新它。那么何不在加锁的时候直接明确这一点呢？如果我读取值是为了更新它（SQL的for update就是这个意思），那么加锁的时候就直接加<strong>写锁</strong>，我持有写锁的时候别的线程无论读还是写都需要等待；如果我读取数据仅为了前端展示，那么加锁时就明确地加一个<strong>读锁，</strong>其他线程如果也要加读锁，不需要等待，可以直接获取（读锁计数器+1）。</p>
+<p>虽然读写锁感觉与乐观锁有点像，但是<strong>读写锁是悲观锁策略</strong>。因为读写锁并没有在<strong>更新前</strong>判断值有没有被修改过，而是在<strong>加锁前</strong>决定应该用读锁还是写锁。乐观锁特指无锁编程，如果仍有疑惑可以再回到第一、二小节，看一下什么是“乐观锁”。</p>
+<p>JDK提供的唯一一个ReadWriteLock接口实现类是ReentrantReadWriteLock。看名字就知道，它不仅提供了读写锁，而是都是可重入锁。 除了两个接口方法以外，ReentrantReadWriteLock还提供了一些便于外界监控其内部工作状态的方法，这里就不一一展开。</p>
+<h2 id="九、回到悲观锁和乐观锁"><a href="#九、回到悲观锁和乐观锁" class="headerlink" title="九、回到悲观锁和乐观锁"></a>九、回到悲观锁和乐观锁</h2><p>我们在Java里使用的各种锁，<strong>几乎全都是悲观锁</strong>。synchronized从偏向锁、轻量级锁到重量级锁，全是悲观锁。JDK提供的Lock实现类全是悲观锁。其实只要有“锁对象”出现，那么就一定是悲观锁。因为<strong>乐观锁不是锁，而是一个在循环里尝试CAS的算法。</strong></p>
+<p>那JDK并发包里到底有没有乐观锁呢？</p>
+<p>有。java.util.concurrent.atomic包里面的<strong>原子类</strong>都是利用乐观锁实现的。</p>
 
             </div>
             <hr/>
@@ -494,7 +538,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://fjf2020.github.io/2020/06/26/%E8%B0%83%E6%95%B4rwnd%E5%92%8Ccwnd%E7%9A%84%E5%A4%A7%E5%B0%8F/">http://fjf2020.github.io/2020/06/26/%E8%B0%83%E6%95%B4rwnd%E5%92%8Ccwnd%E7%9A%84%E5%A4%A7%E5%B0%8F/</a>
+                    <a href="http://fjf2020.github.io/2020/06/27/%E9%94%81/">http://fjf2020.github.io/2020/06/27/%E9%94%81/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -695,9 +739,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/06/27/%E9%94%81/">
                     <div class="card-image">
@@ -716,9 +761,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -727,6 +772,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -737,40 +783,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/06/18/linux%E5%AD%A6%E4%B9%A0/">
+                <a href="/2020/06/26/%E8%B0%83%E6%95%B4rwnd%E5%92%8Ccwnd%E7%9A%84%E5%A4%A7%E5%B0%8F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="linux学习">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="调整rwnd和cwnd的大小">
                         
-                        <span class="card-title">linux学习</span>
+                        <span class="card-title">调整rwnd和cwnd的大小</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            linux（用户名：root，密码123456）
-Linux基础linux系统安装和共享文件设置CentOs终端的使用和联网1.终端的使用：点击鼠标右键，即可选择打开终端
-
-
-
-
-
-
-2.配置网络：
-
-
-
-
-
-
-
-安装vmtools更好的在
+                            如何理性的调整「rwnd」和「cwnd」的大小流量控制传输数据的时候，如果发送方传输的数据量超过了接收方的处理能力，那么接收方会出现丢包。为了避免出现此类问题，流量控制要求数据传输双方在每次交互时声明各自的接收窗口「rwnd」大小，用来表示
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-26
                             </span>
                         <span class="publish-author">
                             
