@@ -465,7 +465,7 @@
 </ul>
 <p><span style="color:Red"><strong>(2)尽量减少临时对象的使用</strong> </span></p>
 <p>临时对象在跳出函数调用后,会成为垃圾,少用临时变量就相当于减少了垃圾的产生,从而延长了出现上述第二个触发条件出现的时间,减少了主GC的机会。 </p>
-<p><span style="color:Red">*<em>(3)对象不用时最好显式置为Null *</em> </span></p>
+<p><span style="color:Red"><strong>(3)对象不用时最好显式置为Null</strong></span></p>
 <p>一般而言,为Null的对象都会被作为垃圾处理,所以将不用的对象显式地设为Null,有利于GC收集器判定垃圾,从而提高了GC的效率。 </p>
 <p><span style="color:Red">*<em>(4)尽量使用StringBuffer,而不用String来累加字符串 *</em> </span></p>
 <p>由于String是固定长的字符串对象,累加String对象时,并非在一个String对象中扩增,而是重新创建新的String对象,如 Str5=Str1+Str2+Str3+Str4,这条语句执行过程中会产生多个垃圾对象,因为对次作“+”操作时都必须创建新的String对象,但这些过渡对象对系统来说是没有实际意义的,只会增加更多的垃圾。避免这种情况可以改用StringBuffer来累加字符串,因StringBuffer 是可变长的,它在原有基础上进行扩增,不会产生中间对象。 </p>
